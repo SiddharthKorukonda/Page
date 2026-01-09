@@ -38,26 +38,27 @@ export default function PageShell({ children, title, subtitle }: PageShellProps)
         </div>
       )}
 
+      {/* Back button - fixed to top left of background */}
+      <button
+        onClick={() => navigate(-1)}
+        className={`
+          fixed top-28 left-4 z-40
+          inline-flex items-center gap-2 px-5 py-2.5 rounded-lg
+          font-bold text-sm transition-all duration-200
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+          ${isRetro 
+            ? 'bg-mario-yellow text-mario-brown hover:bg-yellow-400 focus-visible:ring-mario-yellow shadow-[3px_3px_0_rgba(139,69,19,0.4)] hover:shadow-[1px_1px_0_rgba(139,69,19,0.4)] hover:translate-x-[2px] hover:translate-y-[2px]' 
+            : 'bg-yellow-400 text-gray-900 hover:bg-yellow-500 focus-visible:ring-yellow-400 shadow-md hover:shadow-lg'
+          }
+        `}
+        aria-label="Go back to previous page"
+      >
+        <ArrowLeftIcon size={18} />
+        Back
+      </button>
+
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className={`page-content rounded-2xl p-6 sm:p-8 lg:p-12 ${isRetro ? 'border-4 border-mario-brown' : ''}`}>
-          {/* Back button */}
-          <button
-            onClick={() => navigate(-1)}
-            className={`
-              inline-flex items-center gap-2 px-5 py-2.5 rounded-lg mb-6
-              font-bold text-sm transition-all duration-200
-              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
-              ${isRetro 
-                ? 'bg-mario-yellow text-mario-brown hover:bg-yellow-400 focus-visible:ring-mario-yellow shadow-[3px_3px_0_rgba(139,69,19,0.4)] hover:shadow-[1px_1px_0_rgba(139,69,19,0.4)] hover:translate-x-[2px] hover:translate-y-[2px]' 
-                : 'bg-yellow-400 text-gray-900 hover:bg-yellow-500 focus-visible:ring-yellow-400 shadow-md hover:shadow-lg'
-              }
-            `}
-            aria-label="Go back to previous page"
-          >
-            <ArrowLeftIcon size={18} />
-            Back
-          </button>
-
           {/* Page header */}
           <header className="mb-8 sm:mb-12">
             <h1 className={`
