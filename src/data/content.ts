@@ -11,7 +11,7 @@ export const siteConfig = {
   role: "Computer Science (AI/DS) & Economics @ Stony Brook University",
   
   // One-line value statement shown on homepage
-  // tagline: "Building impactful solutions with code and creativity",
+  tagline: "Building impactful solutions with code and creativity",
   
   // Your email address
   email: "siddharth.korukonda.sk@gmail.com",
