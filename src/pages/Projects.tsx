@@ -26,8 +26,7 @@ export default function Projects() {
         const query = searchQuery.toLowerCase()
         return (
           project.title.toLowerCase().includes(query) ||
-          project.problem.toLowerCase().includes(query) ||
-          project.solution.toLowerCase().includes(query) ||
+          project.bullets.some(bullet => bullet.toLowerCase().includes(query)) ||
           project.techStack.some(tech => tech.toLowerCase().includes(query))
         )
       }
@@ -70,8 +69,8 @@ export default function Projects() {
         {filteredProjects.map((project) => (
           <Card key={project.id} className={`flex flex-col ${project.featured ? 'md:col-span-2' : ''}`}>
             <CardBody className="flex-1">
-              {/* Title and featured badge */}
-              <div className="flex items-start justify-between gap-4 mb-4">
+              {/* Title, date, and featured badge */}
+              <div className="flex items-start justify-between gap-4 mb-2">
                 <h2 className={`
                   text-xl font-display
                   ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
@@ -91,35 +90,29 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* Problem */}
-              <div className="mb-4">
-                <h3 className={`text-sm font-semibold mb-1 ${isRetro ? 'text-pipe-dark' : 'text-gray-700'}`}>
-                  The Problem
-                </h3>
-                <p className={`text-sm ${isRetro ? 'text-mario-brown/80' : 'text-gray-600'}`}>
-                  {project.problem}
-                </p>
-              </div>
+              {/* Date */}
+              <p className={`text-sm mb-4 ${isRetro ? 'text-mario-brown/60' : 'text-gray-500'}`}>
+                {project.date}
+              </p>
 
-              {/* Solution */}
-              <div className="mb-4">
-                <h3 className={`text-sm font-semibold mb-1 ${isRetro ? 'text-pipe-dark' : 'text-gray-700'}`}>
-                  What I Built
-                </h3>
-                <p className={`text-sm ${isRetro ? 'text-mario-brown/80' : 'text-gray-600'}`}>
-                  {project.solution}
-                </p>
-              </div>
-
-              {/* Impact */}
-              <div className="mb-4">
-                <h3 className={`text-sm font-semibold mb-1 ${isRetro ? 'text-pipe-dark' : 'text-gray-700'}`}>
-                  Impact
-                </h3>
-                <p className={`text-sm font-medium ${isRetro ? 'text-mario-green' : 'text-classic-accent'}`}>
-                  {project.impact}
-                </p>
-              </div>
+              {/* Bullet points */}
+              <ul className="space-y-2 mb-4">
+                {project.bullets.map((bullet, idx) => (
+                  <li
+                    key={idx}
+                    className={`
+                      flex items-start gap-3 text-sm
+                      ${isRetro ? 'text-mario-brown/80' : 'text-gray-600'}
+                    `}
+                  >
+                    <span className={`
+                      mt-1.5 w-2 h-2 rounded-full shrink-0
+                      ${isRetro ? 'bg-mario-green' : 'bg-classic-accent'}
+                    `} />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
 
               {/* Tech Stack */}
               <div>
