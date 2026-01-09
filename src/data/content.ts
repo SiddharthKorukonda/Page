@@ -34,9 +34,8 @@ export const siteConfig = {
 export interface Project {
   id: string
   title: string
-  problem: string
-  solution: string
-  impact: string
+  date: string
+  bullets: string[]
   techStack: string[]
   tags: string[]
   links: {
@@ -50,56 +49,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "project-1",
-    title: "E-Commerce Platform",
-    problem: "Local businesses struggled to sell products online during the pandemic with limited technical resources.",
-    solution: "Built a full-stack e-commerce platform with inventory management, payment processing, and real-time order tracking.",
-    impact: "Helped 50+ local businesses go online, processing $2M+ in transactions in the first year.",
-    techStack: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-    tags: ["Full Stack", "E-Commerce", "AWS"],
-    links: {
-      demo: "https://example.com/demo",
-      github: "https://github.com/example/project",
-    },
+    id: "surveilens",
+    title: "SurveiLens - Real-Time AI Safety Platform",
+    date: "November 2025",
+    bullets: [
+      "Integrated OpenCV video analysis and ElevenLabs audio transcription through Gemini reasoning to generate real-time risk assessments",
+      "Enhanced detection precision by combining object tracking, action recognition, and VADER sentiment to minimize false positives",
+      "Enabled multi-device connectivity by streaming RTSP/WebRTC snapshots to Flask and syncing event data into Snowflake for analysis",
+      "Leveraged NeuralSeek to coordinate multimodal AI pipelines, enforce risk-based policies, and broadcast alerts to the live monitoring dashboard",
+    ],
+    techStack: ["React", "Flask", "NeuralSeek", "Snowflake", "ElevenLabs", "OpenCV", "Gemini", "VADER", "WebRTC/RTSP", "Vultr"],
+    tags: ["AI/ML", "Full Stack", "Real-Time"],
+    links: {},
     featured: true,
-  },
-  {
-    id: "project-2",
-    title: "ML-Powered Code Review Bot",
-    problem: "Engineering teams spent excessive time on routine code reviews, delaying feature delivery.",
-    solution: "Developed an AI-powered code review bot that automatically catches common issues and suggests improvements.",
-    impact: "Reduced code review time by 40% and caught 25% more bugs before production.",
-    techStack: ["Python", "TensorFlow", "GitHub API", "Docker"],
-    tags: ["Machine Learning", "DevOps", "Python"],
-    links: {
-      github: "https://github.com/example/ml-review-bot",
-      article: "https://medium.com/example/article",
-    },
-    featured: true,
-  },
-  {
-    id: "project-3",
-    title: "Real-Time Collaboration Tool",
-    problem: "Remote teams needed a lightweight alternative to complex collaboration software.",
-    solution: "Created a real-time document editor with video chat integration and smart notifications.",
-    impact: "Adopted by 3 startup teams, improving meeting efficiency by 30%.",
-    techStack: ["TypeScript", "WebSocket", "WebRTC", "Redis", "React"],
-    tags: ["Full Stack", "Real-Time", "TypeScript"],
-    links: {
-      demo: "https://example.com/collab-demo",
-    },
-  },
-  {
-    id: "project-4",
-    title: "Personal Finance Dashboard",
-    problem: "Tracking expenses across multiple accounts was time-consuming and error-prone.",
-    solution: "Built an automated dashboard that aggregates financial data and provides spending insights.",
-    impact: "Personal project that helped me save 20% more monthly by visualizing spending patterns.",
-    techStack: ["React", "D3.js", "Plaid API", "Firebase"],
-    tags: ["Data Visualization", "Finance", "React"],
-    links: {
-      github: "https://github.com/example/finance-dash",
-    },
   },
 ]
 
