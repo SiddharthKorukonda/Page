@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body antialiased;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-mario-green ring-offset-2;
+  }
+
+  /* Reduced motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* Retro theme styles */
+  .theme-retro {
+    @apply bg-gradient-to-b from-sky-light via-sky-mid to-sky-light;
+  }
+
+  .theme-retro .page-content {
+    @apply bg-white/95 backdrop-blur-sm shadow-2xl;
+  }
+
+  /* Classic theme styles */
+  .theme-classic {
+    @apply bg-classic-bg;
+  }
+
+  .theme-classic .page-content {
+    @apply bg-white shadow-lg;
+  }
+
+  /* Button base styles */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-mario-green text-white hover:bg-pipe-dark focus-visible:ring-mario-green;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 focus-visible:ring-gray-400;
+  }
+
+  .btn-outline {
+    @apply border-2 border-current hover:bg-gray-100;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300;
+    @apply hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .card-retro {
+    @apply border-4 border-mario-brown;
+    box-shadow: 4px 4px 0 rgba(139, 69, 19, 0.3);
+  }
+
+  /* Pipe button styles */
+  .pipe-button {
+    @apply relative cursor-pointer transition-transform duration-300;
+    @apply hover:scale-105 focus-visible:scale-105;
+    @apply focus-visible:outline-none;
+  }
+
+  .pipe-button:active {
+    @apply scale-95;
+  }
+
+  /* Tag styles */
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    @apply bg-mario-green/10 text-pipe-dark;
+  }
+
+  .theme-classic .tag {
+    @apply bg-classic-accent/10 text-classic-accent;
+  }
+
+  /* Input styles */
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-gray-200;
+    @apply focus:border-mario-green focus:ring-0 focus:outline-none;
+    @apply placeholder:text-gray-400;
+  }
+
+  .theme-classic .input {
+    @apply focus:border-classic-accent;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-3xl md:text-4xl font-display text-gray-900 mb-4;
+  }
+
+  .theme-retro .section-title {
+    @apply text-mario-brown;
+    text-shadow: 2px 2px 0 rgba(139, 69, 19, 0.2);
+  }
+
+  /* Skill badge */
+  .skill-badge {
+    @apply px-4 py-2 rounded-lg font-medium text-sm;
+    @apply bg-gradient-to-r from-pipe-green to-mario-green text-white;
+    @apply shadow-md transition-all duration-200 hover:shadow-lg hover:scale-105;
+  }
+
+  .theme-classic .skill-badge {
+    @apply bg-gradient-to-r from-classic-accent to-blue-500;
+  }
+}
+
+/* Utility styles */
+@layer utilities {
+  /* Pixel border effect */
+  .pixel-border {
+    box-shadow:
+      inset -4px -4px 0 0 rgba(0, 0, 0, 0.2),
+      inset 4px 4px 0 0 rgba(255, 255, 255, 0.2);
+  }
+
+  /* Ground pattern */
+  .ground-pattern {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 20px,
+        rgba(139, 69, 19, 0.1) 20px,
+        rgba(139, 69, 19, 0.1) 40px
+      );
+  }
+
+  /* Cloud shadow */
+  .cloud-shadow {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  }
+
+  /* Text shadow for retro look */
+  .text-shadow-retro {
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Glow effect */
+  .glow-green {
+    box-shadow: 0 0 20px rgba(67, 176, 71, 0.4);
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-mario-green via-mario-blue to-pipe-green;
+  }
+
+  .theme-classic .gradient-text {
+    @apply bg-gradient-to-r from-classic-accent to-blue-500;
+  }
+}
+
+/* Animations */
+@keyframes cloud-drift {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(calc(100vw + 100%));
+  }
+}
+
+.animate-cloud-drift {
+  animation: cloud-drift 30s linear infinite;
+}
+
+.animate-cloud-drift-slow {
+  animation: cloud-drift 45s linear infinite;
+}
+
+.animate-cloud-drift-fast {
+  animation: cloud-drift 20s linear infinite;
+}
+
+/* Stagger delays for animations */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }

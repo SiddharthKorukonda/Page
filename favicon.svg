@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Pipe body -->
+  <rect x="25" y="30" width="50" height="60" fill="#2D8B4D"/>
+  <rect x="25" y="30" width="12" height="60" fill="#5AC575"/>
+  <rect x="63" y="30" width="12" height="60" fill="#1A5C33"/>
+  
+  <!-- Pipe rim -->
+  <rect x="15" y="15" width="70" height="20" rx="4" fill="#2D8B4D"/>
+  <rect x="15" y="15" width="17" height="20" rx="4" fill="#5AC575"/>
+  <rect x="68" y="15" width="17" height="20" rx="4" fill="#1A5C33"/>
+  
+  <!-- Inner opening -->
+  <ellipse cx="50" cy="22" rx="20" ry="6" fill="#1A5C33" opacity="0.7"/>
+  
+  <!-- Highlight -->
+  <rect x="30" y="18" width="8" height="8" rx="2" fill="white" opacity="0.3"/>
+</svg>
