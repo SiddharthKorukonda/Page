@@ -6,6 +6,7 @@ import Experience from './pages/Experience'
 import Research from './pages/Research'
 import Awards from './pages/Awards'
 import About from './pages/About'
+import Resume from './pages/Resume'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/research" element={<Research />} />
         <Route path="/awards" element={<Awards />} />
         <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
     </ThemeProvider>
   )

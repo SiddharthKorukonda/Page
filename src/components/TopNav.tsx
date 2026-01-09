@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 import { ResumeIcon, LinkedInIcon, GitHubIcon, EmailIcon, GamepadIcon, SunIcon, HomeIcon } from './icons'
 import { siteConfig } from '../data/content'
@@ -6,6 +6,7 @@ import { siteConfig } from '../data/content'
 export default function TopNav() {
   const { theme, toggleTheme, isRetro } = useTheme()
   const location = useLocation()
+  const navigate = useNavigate()
   const isHome = location.pathname === '/'
 
   return (
@@ -75,10 +76,8 @@ export default function TopNav() {
           <div className="w-px h-6 bg-current opacity-20" />
 
           {/* Social links */}
-          <a
-            href={siteConfig.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => navigate('/resume')}
             className={`
               p-2 sm:p-2.5 rounded-lg transition-all duration-200
               ${isRetro 
@@ -86,11 +85,11 @@ export default function TopNav() {
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }
             `}
-            aria-label="Download Resume (opens in new tab)"
+            aria-label="View Resume"
             title="Resume"
           >
             <ResumeIcon size={18} />
-          </a>
+          </button>
 
           <a
             href={siteConfig.linkedinUrl}
