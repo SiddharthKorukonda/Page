@@ -78,6 +78,20 @@ export const projects: Project[] = [
     links: {},
     featured: true,
   },
+  {
+    id: "sbu-care-connect",
+    title: "SBU Care Connect - Website App for the Stony Brook Hospital Free Clinic",
+    date: "January 2025",
+    bullets: [
+      "Built a React frontend with a map API that lets patients search the nearest Stony Brook Hospital partner by address, and added a chat box powered by an OpenAI LLM for patient guidance",
+      "Developed a Python Flask backend with an SQL database for partner locations and a separate SQL database for patient records, and used a NoSQL store for patient chat logs with APIs that serve map searches and chat sessions",
+      "Implemented authentication and login tied to a user key in SQL, secured data storage and access controls, and personalized features and content for each patient after sign in",
+    ],
+    techStack: ["React", "Map API", "Flask", "SQL", "NoSQL", "OpenAI API", "Auth/JWT"],
+    tags: ["Full Stack", "Healthcare", "AI/ML"],
+    links: {},
+    featured: true,
+  },
 ]
 
 // ============================================
