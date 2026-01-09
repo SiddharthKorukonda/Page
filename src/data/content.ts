@@ -230,7 +230,7 @@ export const awards: Award[] = [
     id: "award-divhacks-2025",
     name: "Columbia DivHacks 2025",
     organization: "Columbia University",
-    description: "Best Hack - Entertainment, Best Usage of Opik",
+    description: "• Best Hack - Entertainment\n• Best Usage of Opik",
     year: 2025,
   },
 ]

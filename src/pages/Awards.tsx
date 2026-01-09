@@ -79,7 +79,7 @@ export default function Awards() {
 
                       {/* Description */}
                       <p className={`
-                        text-sm
+                        text-sm whitespace-pre-line
                         ${isRetro ? 'text-mario-brown/70' : 'text-gray-600'}
                       `}>
                         {award.description}
