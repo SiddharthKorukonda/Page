@@ -6,10 +6,10 @@ import Ground from '../components/svg/Ground'
 import { siteConfig } from '../data/content'
 
 export default function Home() {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
 
   return (
-    <div className={`min-h-screen ${isRetro ? 'theme-retro' : 'theme-classic'}`}>
+    <div className={`min-h-screen ${isRetro ? 'theme-retro' : isDark ? 'bg-gray-900' : 'theme-classic'}`}>
       <TopNav />
 
       {/* Background elements for retro mode */}
@@ -48,7 +48,9 @@ export default function Home() {
             inline-block px-6 py-8 sm:px-12 sm:py-12 rounded-2xl
             ${isRetro 
               ? 'bg-white/95 backdrop-blur-sm border-4 border-mario-brown shadow-[8px_8px_0_rgba(139,69,19,0.3)]' 
-              : 'bg-white shadow-2xl'
+              : isDark
+                ? 'bg-gray-800 shadow-2xl'
+                : 'bg-white shadow-2xl'
             }
           `}>
             {/* Welcome badge */}
@@ -65,7 +67,9 @@ export default function Home() {
               text-4xl sm:text-5xl lg:text-6xl font-display mb-4
               ${isRetro 
                 ? 'text-mario-brown text-shadow-retro' 
-                : 'text-gray-900'
+                : isDark
+                  ? 'text-white'
+                  : 'text-gray-900'
               }
             `}>
               {siteConfig.name}
@@ -76,7 +80,9 @@ export default function Home() {
               text-xl sm:text-2xl font-medium mb-4
               ${isRetro 
                 ? 'text-pipe-dark' 
-                : 'text-classic-accent'
+                : isDark
+                  ? 'text-blue-400'
+                  : 'text-classic-accent'
               }
             `}>
               {siteConfig.role}
@@ -87,7 +93,9 @@ export default function Home() {
               text-lg sm:text-xl max-w-2xl mx-auto
               ${isRetro 
                 ? 'text-mario-brown/80' 
-                : 'text-gray-600'
+                : isDark
+                  ? 'text-gray-400'
+                  : 'text-gray-600'
               }
             `}>
               {siteConfig.tagline}
@@ -116,7 +124,9 @@ export default function Home() {
           text-center mt-8 text-sm
           ${isRetro 
             ? 'text-white/80' 
-            : 'text-gray-500'
+            : isDark
+              ? 'text-gray-500'
+              : 'text-gray-500'
           }
         `}>
           {isRetro 
@@ -129,7 +139,7 @@ export default function Home() {
       {/* Footer */}
       <footer className={`
         py-8 text-center text-sm
-        ${isRetro ? 'text-white/70 relative z-10' : 'text-gray-500'}
+        ${isRetro ? 'text-white/70 relative z-10' : isDark ? 'text-gray-500' : 'text-gray-500'}
       `}>
         <p>© {new Date().getFullYear()} {siteConfig.name} • Built with React & Tailwind CSS</p>
       </footer>

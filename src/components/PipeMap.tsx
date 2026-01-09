@@ -11,7 +11,7 @@ const navItems = [
 ]
 
 export default function PipeMap() {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
 
   return (
     <section
@@ -26,7 +26,9 @@ export default function PipeMap() {
         relative rounded-2xl p-6 sm:p-8 lg:p-12
         ${isRetro 
           ? 'bg-gradient-to-b from-sky-light/50 to-transparent border-4 border-mario-brown/30' 
-          : 'bg-gray-50 border border-gray-200'
+          : isDark
+            ? 'bg-gray-800/50 border border-gray-700'
+            : 'bg-gray-50 border border-gray-200'
         }
       `}>
         {/* Retro decorations */}

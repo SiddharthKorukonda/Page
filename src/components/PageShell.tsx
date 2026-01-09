@@ -12,11 +12,11 @@ interface PageShellProps {
 }
 
 export default function PageShell({ children, title, subtitle }: PageShellProps) {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
   const navigate = useNavigate()
 
   return (
-    <div className={`min-h-screen ${isRetro ? 'theme-retro' : 'theme-classic'}`}>
+    <div className={`min-h-screen ${isRetro ? 'theme-retro' : isDark ? 'bg-gray-900' : 'theme-classic'}`}>
       <TopNav />
       
       {/* Background decorations for retro mode */}
@@ -58,19 +58,19 @@ export default function PageShell({ children, title, subtitle }: PageShellProps)
       </button>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className={`page-content rounded-2xl p-6 sm:p-8 lg:p-12 ${isRetro ? 'border-4 border-mario-brown' : ''}`}>
+        <div className={`page-content rounded-2xl p-6 sm:p-8 lg:p-12 ${isRetro ? 'border-4 border-mario-brown' : isDark ? 'bg-gray-800 shadow-2xl' : ''}`}>
           {/* Page header */}
           <header className="mb-8 sm:mb-12">
             <h1 className={`
               section-title text-3xl sm:text-4xl lg:text-5xl font-display
-              ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+              ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
             `}>
               {title}
             </h1>
             {subtitle && (
               <p className={`
                 mt-3 text-lg sm:text-xl
-                ${isRetro ? 'text-mario-brown/70' : 'text-gray-600'}
+                ${isRetro ? 'text-mario-brown/70' : isDark ? 'text-gray-400' : 'text-gray-600'}
               `}>
                 {subtitle}
               </p>
@@ -85,7 +85,7 @@ export default function PageShell({ children, title, subtitle }: PageShellProps)
       {/* Footer */}
       <footer className={`
         py-6 text-center text-sm
-        ${isRetro ? 'text-white/70' : 'text-gray-500'}
+        ${isRetro ? 'text-white/70' : isDark ? 'text-gray-500' : 'text-gray-500'}
       `}>
         <p>© {new Date().getFullYear()} • Built with passion</p>
       </footer>

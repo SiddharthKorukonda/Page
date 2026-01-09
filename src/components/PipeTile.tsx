@@ -12,26 +12,29 @@ interface PipeTileProps {
 }
 
 export default function PipeTile({ to, label, icon, variant = 'default', delay = 0 }: PipeTileProps) {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
 
   if (!isRetro) {
     // Classic mode - clean button style
     return (
       <Link
         to={to}
-        className="
+        className={`
           group flex flex-col items-center gap-3 p-6
-          bg-white rounded-xl shadow-lg border border-gray-200
-          hover:shadow-xl hover:border-classic-accent hover:-translate-y-1
-          transition-all duration-300
-          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-classic-accent focus-visible:ring-offset-2
-        "
+          rounded-xl shadow-lg border transition-all duration-300
+          hover:shadow-xl hover:-translate-y-1
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+          ${isDark 
+            ? 'bg-gray-800 border-gray-700 hover:border-blue-400 focus-visible:ring-blue-400' 
+            : 'bg-white border-gray-200 hover:border-classic-accent focus-visible:ring-classic-accent'
+          }
+        `}
         aria-label={`Navigate to ${label}`}
       >
-        <div className="p-3 rounded-full bg-classic-accent/10 text-classic-accent group-hover:bg-classic-accent group-hover:text-white transition-colors duration-300">
+        <div className={`p-3 rounded-full transition-colors duration-300 ${isDark ? 'bg-blue-500/20 text-blue-400 group-hover:bg-blue-500 group-hover:text-white' : 'bg-classic-accent/10 text-classic-accent group-hover:bg-classic-accent group-hover:text-white'}`}>
           {icon}
         </div>
-        <span className="font-display text-sm text-gray-900 group-hover:text-classic-accent transition-colors">
+        <span className={`font-display text-sm transition-colors ${isDark ? 'text-gray-200 group-hover:text-blue-400' : 'text-gray-900 group-hover:text-classic-accent'}`}>
           {label}
         </span>
       </Link>
