@@ -125,6 +125,20 @@ export const experiences: Experience[] = [
     ],
     technologies: ["React", "Flask", "SQL", "NoSQL", "REST APIs", "Authentication"],
   },
+  {
+    id: "exp-sbu-research",
+    title: "Undergraduate Researcher",
+    company: "Secure Distributed Computation and Learning Networks Research",
+    location: "Stony Brook, NY",
+    startDate: "Aug 2024",
+    endDate: "Present",
+    bullets: [
+      "Maintained 80% consensus in Byzantine networks by projecting updates onto convex sets and eliminating adversarial values",
+      "Achieved 77% valid input preservation in real-time decision-making under adversarial corruption",
+      "Enabled stable updates with 93% agent interaction through controlled neighborhood protocols",
+    ],
+    technologies: ["Distributed Systems", "Machine Learning", "Byzantine Fault Tolerance"],
+  },
 ]
 
 // ============================================
