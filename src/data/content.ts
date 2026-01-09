@@ -285,12 +285,15 @@ The theme is also my creativity, so hope you enjoy exploring :)`,
     { label: "Certifications", value: "2" },
   ],
 
-  interests: [
-    "Artificial Intelligence",
-    "Distributed Systems",
+  coursework: [
     "Machine Learning",
-    "Full-Stack Development",
-    "Data Science",
+    "Artificial Intelligence",
+    "NLP",
+    "Distributed Systems",
+    "Computer Vision",
+    "Software Security",
+    "Cloud Computing",
+    "Advanced OS",
   ],
 
   education: [

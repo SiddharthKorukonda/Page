@@ -104,17 +104,17 @@ export default function About() {
         </div>
       </section>
 
-      {/* Interests */}
+      {/* Related Coursework */}
       <section className="mb-12">
         <h2 className={`
           text-2xl font-display mb-6
           ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
         `}>
-          Interests
+          Related Coursework
         </h2>
         
         <div className="flex flex-wrap gap-3">
-          {about.interests.map((interest, index) => (
+          {about.coursework.map((course, index) => (
             <span
               key={index}
               className={`
@@ -125,7 +125,7 @@ export default function About() {
                 }
               `}
             >
-              {interest}
+              {course}
             </span>
           ))}
         </div>
