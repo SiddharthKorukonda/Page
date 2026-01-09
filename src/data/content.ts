@@ -23,7 +23,7 @@ export const siteConfig = {
   linkedinUrl: "https://linkedin.com/in/yourprofile",
   
   // Your GitHub profile URL
-  githubUrl: "https://github.com/yourusername",
+  githubUrl: "https://github.com/SiddharthKorukonda",
 }
 
 // ============================================
