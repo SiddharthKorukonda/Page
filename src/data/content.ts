@@ -227,46 +227,11 @@ export interface Award {
 
 export const awards: Award[] = [
   {
-    id: "award-1",
-    name: "Best Paper Award",
-    organization: "ACM Conference on Computer Science",
-    description: "Recognized for outstanding contribution to the field of distributed systems",
-    year: 2024,
-  },
-  {
-    id: "award-2",
-    name: "Dean's List",
-    organization: "University of Technology",
-    description: "Achieved top 5% GPA in Computer Science department for 4 consecutive semesters",
-    year: 2023,
-  },
-  {
-    id: "award-3",
-    name: "1st Place - National Hackathon",
-    organization: "TechCrunch Disrupt Hackathon",
-    description: "Won first place among 500+ teams for building an AI-powered accessibility tool",
-    year: 2023,
-  },
-  {
-    id: "award-4",
-    name: "Google Developer Scholarship",
-    organization: "Google",
-    description: "Selected as one of 100 recipients globally for excellence in mobile development",
-    year: 2022,
-  },
-  {
-    id: "award-5",
-    name: "Outstanding Teaching Assistant",
-    organization: "Department of Computer Science",
-    description: "Recognized for exceptional support in Data Structures & Algorithms course",
-    year: 2022,
-  },
-  {
-    id: "award-6",
-    name: "Research Excellence Fellowship",
-    organization: "National Science Foundation",
-    description: "Awarded $25,000 fellowship to pursue research in machine learning",
-    year: 2021,
+    id: "award-divhacks-2025",
+    name: "Columbia DivHacks 2025",
+    organization: "Columbia University",
+    description: "Best Hack - Entertainment, Best Usage of Opik",
+    year: 2025,
   },
 ]
 
