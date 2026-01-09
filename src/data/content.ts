@@ -209,35 +209,7 @@ export interface Research {
 }
 
 export const research: Research[] = [
-  {
-    id: "research-1",
-    title: "Optimizing Neural Network Inference on Edge Devices",
-    venue: "International Conference on Machine Learning (ICML) 2024",
-    authors: ["Your Name", "Dr. Jane Smith", "Dr. John Doe"],
-    myRole: "Lead researcher responsible for model optimization and benchmarking",
-    summary: "Developed novel quantization techniques that reduce model size by 75% while maintaining 98% accuracy, enabling real-time inference on resource-constrained IoT devices.",
-    link: "https://arxiv.org/abs/example",
-    year: 2024,
-  },
-  {
-    id: "research-2",
-    title: "A Survey of Privacy-Preserving Machine Learning Techniques",
-    venue: "IEEE Transactions on Information Forensics and Security",
-    authors: ["Your Name", "Research Team"],
-    myRole: "Co-author focusing on federated learning section",
-    summary: "Comprehensive review of state-of-the-art privacy-preserving ML methods including differential privacy, secure multi-party computation, and federated learning.",
-    link: "https://ieeexplore.ieee.org/example",
-    year: 2023,
-  },
-  {
-    id: "research-3",
-    title: "Improving Code Generation with Retrieval-Augmented Models",
-    venue: "In Progress - Targeting NeurIPS 2025",
-    authors: ["Your Name", "Lab Members"],
-    myRole: "Primary investigator designing retrieval pipeline",
-    summary: "Exploring how retrieval-augmented generation can improve code completion accuracy and reduce hallucinations in large language models.",
-    year: 2025,
-  },
+  // Research publications coming soon!
 ]
 
 // ============================================

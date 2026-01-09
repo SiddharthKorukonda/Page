@@ -99,13 +99,38 @@ export default function Research() {
         ))}
       </div>
 
-      {/* Empty state */}
+      {/* Coming soon state */}
       {research.length === 0 && (
         <div className={`
-          text-center py-12
-          ${isRetro ? 'text-mario-brown/60' : 'text-gray-500'}
+          text-center py-16 px-6 rounded-2xl
+          ${isRetro 
+            ? 'bg-mario-yellow/10 border-4 border-dashed border-mario-brown/30' 
+            : 'bg-gray-50 border-2 border-dashed border-gray-300'
+          }
         `}>
-          <p className="text-lg">No research papers yet. Check back soon!</p>
+          <div className={`
+            text-5xl mb-4
+          `}>
+            🔬
+          </div>
+          <h3 className={`
+            text-2xl font-display mb-3
+            ${isRetro ? 'text-mario-brown' : 'text-gray-800'}
+          `}>
+            Research in Progress
+          </h3>
+          <p className={`
+            text-lg mb-2
+            ${isRetro ? 'text-mario-brown/70' : 'text-gray-600'}
+          `}>
+            Exciting publications are currently in the works!
+          </p>
+          <p className={`
+            text-sm
+            ${isRetro ? 'text-mario-brown/50' : 'text-gray-500'}
+          `}>
+            Check back soon for updates on my latest research contributions.
+          </p>
         </div>
       )}
     </PageShell>
