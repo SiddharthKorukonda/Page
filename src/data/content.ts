@@ -295,9 +295,14 @@ The theme is also my creativity, so hope you enjoy exploring :)`,
 
   education: [
     {
-      degree: "B.S. Computer Science (AI/DS) & Economics",
+      degree: "B.S. in Computer Science (spec. AI/DS)",
       school: "Stony Brook University",
-      year: "Expected 2027",
+      year: "Expected May 2027",
+    },
+    {
+      degree: "B.A. in Economics",
+      school: "Stony Brook University",
+      year: "Expected May 2027",
     },
   ],
 }
