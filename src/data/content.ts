@@ -222,16 +222,26 @@ export interface Award {
   name: string
   organization: string
   description: string
-  year: number
+  date: string // e.g., "November 2025"
+  sortOrder: number // for sorting (higher = more recent, e.g., 202511 for Nov 2025)
 }
 
 export const awards: Award[] = [
+  {
+    id: "award-sbuhacks-2025",
+    name: "SBUHacks 2025",
+    organization: "Stony Brook University",
+    description: "• Best Usage of NeuralSeek\n• Best Usage of Snowflake",
+    date: "November 2025",
+    sortOrder: 202511,
+  },
   {
     id: "award-divhacks-2025",
     name: "Columbia DivHacks 2025",
     organization: "Columbia University",
     description: "• Best Hack - Entertainment\n• Best Usage of Opik",
-    year: 2025,
+    date: "October 2025",
+    sortOrder: 202510,
   },
 ]
 
@@ -297,12 +307,7 @@ export function getFeaturedProjects(): Project[] {
   return projects.filter(p => p.featured)
 }
 
-// Get awards grouped by year
-export function getAwardsByYear(): Map<number, Award[]> {
-  const grouped = new Map<number, Award[]>()
-  awards.forEach(award => {
-    const existing = grouped.get(award.year) || []
-    grouped.set(award.year, [...existing, award])
-  })
-  return new Map([...grouped.entries()].sort((a, b) => b[0] - a[0]))
+// Get awards sorted by date (newest first)
+export function getSortedAwards(): Award[] {
+  return [...awards].sort((a, b) => b.sortOrder - a.sortOrder)
 }
