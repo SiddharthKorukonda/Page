@@ -8,7 +8,7 @@ export const siteConfig = {
   name: "Siddharth Korukonda",
   
   // Your professional role/title
-  role: "Software Engineer",
+  role: "Computer Science (AI/ML/DS), Economics, Applied Math & Statistics @ Stony Brook University",
   
   // One-line value statement shown on homepage
   tagline: "Building impactful solutions with code and creativity",
