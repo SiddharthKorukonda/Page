@@ -6,7 +6,7 @@ import { useTheme } from '../context/ThemeContext'
 import { getSortedAwards, Award } from '../data/content'
 
 export default function Awards() {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
   const sortedAwards = useMemo(() => getSortedAwards(), [])
   
   // Group awards by year (extracted from date string)
@@ -32,13 +32,13 @@ export default function Awards() {
             <div className="flex items-center gap-4 mb-6">
               <h2 className={`
                 text-2xl font-display
-                ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+                ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
               `}>
                 {year}
               </h2>
               <div className={`
                 flex-1 h-px
-                ${isRetro ? 'bg-mario-brown/20' : 'bg-gray-200'}
+                ${isRetro ? 'bg-mario-brown/20' : isDark ? 'bg-gray-700' : 'bg-gray-200'}
               `} />
               {isRetro && (
                 <div className="flex gap-1">
@@ -76,13 +76,13 @@ export default function Awards() {
                       <div className="flex items-start justify-between gap-4 mb-1">
                         <h3 className={`
                           text-lg font-display
-                          ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+                          ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
                         `}>
                           {award.name}
                         </h3>
                         <span className={`
                           text-sm font-medium shrink-0
-                          ${isRetro ? 'text-mario-brown/60' : 'text-gray-500'}
+                          ${isRetro ? 'text-mario-brown/60' : isDark ? 'text-gray-400' : 'text-gray-500'}
                         `}>
                           {award.date}
                         </span>
@@ -91,7 +91,7 @@ export default function Awards() {
                       {/* Organization */}
                       <p className={`
                         text-sm font-medium mb-2
-                        ${isRetro ? 'text-pipe-dark' : 'text-classic-accent'}
+                        ${isRetro ? 'text-pipe-dark' : isDark ? 'text-blue-400' : 'text-classic-accent'}
                       `}>
                         {award.organization}
                       </p>
@@ -99,7 +99,7 @@ export default function Awards() {
                       {/* Description */}
                       <p className={`
                         text-sm whitespace-pre-line
-                        ${isRetro ? 'text-mario-brown/70' : 'text-gray-600'}
+                        ${isRetro ? 'text-mario-brown/70' : isDark ? 'text-gray-300' : 'text-gray-600'}
                       `}>
                         {award.description}
                       </p>
@@ -116,7 +116,7 @@ export default function Awards() {
       {sortedAwards.length === 0 && (
         <div className={`
           text-center py-12
-          ${isRetro ? 'text-mario-brown/60' : 'text-gray-500'}
+          ${isRetro ? 'text-mario-brown/60' : isDark ? 'text-gray-400' : 'text-gray-500'}
         `}>
           <p className="text-lg">No distinctions listed yet. Check back soon!</p>
         </div>

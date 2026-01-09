@@ -5,7 +5,7 @@ import { useTheme } from '../context/ThemeContext'
 import { research } from '../data/content'
 
 export default function Research() {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
 
   return (
     <PageShell
@@ -20,7 +20,7 @@ export default function Research() {
               <div className="flex items-start justify-between gap-4 mb-3">
                 <h2 className={`
                   text-xl font-display
-                  ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+                  ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
                 `}>
                   {paper.title}
                 </h2>
@@ -28,7 +28,9 @@ export default function Research() {
                   px-3 py-1 rounded-full text-sm font-bold shrink-0
                   ${isRetro 
                     ? 'bg-mario-yellow text-mario-brown' 
-                    : 'bg-classic-accent/10 text-classic-accent'
+                    : isDark
+                      ? 'bg-blue-500/20 text-blue-400'
+                      : 'bg-classic-accent/10 text-classic-accent'
                   }
                 `}>
                   {paper.year}
@@ -39,8 +41,8 @@ export default function Research() {
               <p className={`
                 text-sm font-medium mb-2
                 ${paper.venue.includes('In Progress')
-                  ? isRetro ? 'text-mario-orange' : 'text-amber-600'
-                  : isRetro ? 'text-pipe-dark' : 'text-classic-accent'
+                  ? isRetro ? 'text-mario-orange' : isDark ? 'text-amber-400' : 'text-amber-600'
+                  : isRetro ? 'text-pipe-dark' : isDark ? 'text-blue-400' : 'text-classic-accent'
                 }
               `}>
                 {paper.venue}
@@ -49,27 +51,27 @@ export default function Research() {
               {/* Authors */}
               <p className={`
                 text-sm mb-4
-                ${isRetro ? 'text-mario-brown/60' : 'text-gray-500'}
+                ${isRetro ? 'text-mario-brown/60' : isDark ? 'text-gray-400' : 'text-gray-500'}
               `}>
                 {paper.authors.join(', ')}
               </p>
 
               {/* My Role */}
               <div className="mb-4">
-                <h3 className={`text-sm font-semibold mb-1 ${isRetro ? 'text-pipe-dark' : 'text-gray-700'}`}>
+                <h3 className={`text-sm font-semibold mb-1 ${isRetro ? 'text-pipe-dark' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   My Role
                 </h3>
-                <p className={`text-sm ${isRetro ? 'text-mario-brown/80' : 'text-gray-600'}`}>
+                <p className={`text-sm ${isRetro ? 'text-mario-brown/80' : isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                   {paper.myRole}
                 </p>
               </div>
 
               {/* Summary */}
               <div>
-                <h3 className={`text-sm font-semibold mb-1 ${isRetro ? 'text-pipe-dark' : 'text-gray-700'}`}>
+                <h3 className={`text-sm font-semibold mb-1 ${isRetro ? 'text-pipe-dark' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   Summary
                 </h3>
-                <p className={`text-sm ${isRetro ? 'text-mario-brown/80' : 'text-gray-600'}`}>
+                <p className={`text-sm ${isRetro ? 'text-mario-brown/80' : isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                   {paper.summary}
                 </p>
               </div>
@@ -105,7 +107,9 @@ export default function Research() {
           text-center py-16 px-6 rounded-2xl
           ${isRetro 
             ? 'bg-mario-yellow/10 border-4 border-dashed border-mario-brown/30' 
-            : 'bg-gray-50 border-2 border-dashed border-gray-300'
+            : isDark
+              ? 'bg-gray-800 border-2 border-dashed border-gray-600'
+              : 'bg-gray-50 border-2 border-dashed border-gray-300'
           }
         `}>
           <div className={`
@@ -115,19 +119,19 @@ export default function Research() {
           </div>
           <h3 className={`
             text-2xl font-display mb-3
-            ${isRetro ? 'text-mario-brown' : 'text-gray-800'}
+            ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-800'}
           `}>
             Research in Progress
           </h3>
           <p className={`
             text-lg mb-2
-            ${isRetro ? 'text-mario-brown/70' : 'text-gray-600'}
+            ${isRetro ? 'text-mario-brown/70' : isDark ? 'text-gray-300' : 'text-gray-600'}
           `}>
             Exciting publications are currently in the works!
           </p>
           <p className={`
             text-sm
-            ${isRetro ? 'text-mario-brown/50' : 'text-gray-500'}
+            ${isRetro ? 'text-mario-brown/50' : isDark ? 'text-gray-400' : 'text-gray-500'}
           `}>
             Check back soon for updates on my latest research contributions.
           </p>

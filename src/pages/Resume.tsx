@@ -8,7 +8,7 @@ import { ResumeIcon, ExternalLinkIcon } from '../components/icons'
 const RESUME_PATH = './Resume - 12_18_25.pdf'
 
 export default function Resume() {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 
@@ -54,7 +54,9 @@ export default function Resume() {
             font-medium transition-all duration-200
             ${isRetro 
               ? 'bg-mario-yellow text-mario-brown hover:bg-yellow-400' 
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              : isDark
+                ? 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }
           `}
         >
@@ -68,14 +70,16 @@ export default function Resume() {
         relative rounded-xl overflow-hidden
         ${isRetro 
           ? 'border-4 border-mario-brown shadow-[4px_4px_0_rgba(139,69,19,0.3)]' 
-          : 'border border-gray-200 shadow-lg'
+          : isDark
+            ? 'border border-gray-700 shadow-lg bg-gray-800'
+            : 'border border-gray-200 shadow-lg'
         }
       `}>
         {/* Loading state */}
         {isLoading && !hasError && (
           <div className={`
             absolute inset-0 flex items-center justify-center
-            ${isRetro ? 'bg-mario-yellow/10' : 'bg-gray-50'}
+            ${isRetro ? 'bg-mario-yellow/10' : isDark ? 'bg-gray-800' : 'bg-gray-50'}
           `}>
             <div className="text-center">
               <div className={`
@@ -85,7 +89,7 @@ export default function Resume() {
                   : 'border-classic-accent border-t-transparent'
                 }
               `} />
-              <p className={isRetro ? 'text-mario-brown' : 'text-gray-600'}>
+              <p className={isRetro ? 'text-mario-brown' : isDark ? 'text-gray-300' : 'text-gray-600'}>
                 Loading resume...
               </p>
             </div>
@@ -96,12 +100,12 @@ export default function Resume() {
         {hasError && (
           <div className={`
             p-12 text-center
-            ${isRetro ? 'bg-mario-red/10' : 'bg-red-50'}
+            ${isRetro ? 'bg-mario-red/10' : isDark ? 'bg-gray-800' : 'bg-red-50'}
           `}>
-            <p className={`text-lg mb-4 ${isRetro ? 'text-mario-brown' : 'text-gray-700'}`}>
+            <p className={`text-lg mb-4 ${isRetro ? 'text-mario-brown' : isDark ? 'text-gray-200' : 'text-gray-700'}`}>
               Unable to load the PDF viewer.
             </p>
-            <p className={`mb-6 ${isRetro ? 'text-mario-brown/70' : 'text-gray-500'}`}>
+            <p className={`mb-6 ${isRetro ? 'text-mario-brown/70' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
               Please use the buttons above to download or view in a new tab.
             </p>
             <button
@@ -138,7 +142,7 @@ export default function Resume() {
       {/* Instructions note */}
       <p className={`
         mt-6 text-sm text-center
-        ${isRetro ? 'text-mario-brown/60' : 'text-gray-500'}
+        ${isRetro ? 'text-mario-brown/60' : isDark ? 'text-gray-400' : 'text-gray-500'}
       `}>
         Having trouble viewing? Try downloading the PDF or opening in a new tab.
       </p>

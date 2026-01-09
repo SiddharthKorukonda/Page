@@ -8,7 +8,7 @@ import { useTheme } from '../context/ThemeContext'
 import { projects, getAllProjectTags } from '../data/content'
 
 export default function Projects() {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
 
@@ -60,7 +60,7 @@ export default function Projects() {
       </div>
 
       {/* Results count */}
-      <p className={`mb-6 text-sm ${isRetro ? 'text-mario-brown/70' : 'text-gray-500'}`}>
+      <p className={`mb-6 text-sm ${isRetro ? 'text-mario-brown/70' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
         Showing {filteredProjects.length} of {projects.length} projects
       </p>
 
@@ -73,7 +73,7 @@ export default function Projects() {
               <div className="flex items-start justify-between gap-4 mb-2">
                 <h2 className={`
                   text-xl font-display
-                  ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+                  ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
                 `}>
                   {project.title}
                 </h2>
@@ -82,7 +82,9 @@ export default function Projects() {
                     px-3 py-1 rounded-full text-xs font-bold shrink-0
                     ${isRetro 
                       ? 'bg-mario-yellow text-mario-brown' 
-                      : 'bg-classic-accent/10 text-classic-accent'
+                      : isDark
+                        ? 'bg-blue-500/20 text-blue-400'
+                        : 'bg-classic-accent/10 text-classic-accent'
                     }
                   `}>
                     Featured
@@ -91,7 +93,7 @@ export default function Projects() {
               </div>
 
               {/* Date */}
-              <p className={`text-sm mb-4 ${isRetro ? 'text-mario-brown/60' : 'text-gray-500'}`}>
+              <p className={`text-sm mb-4 ${isRetro ? 'text-mario-brown/60' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                 {project.date}
               </p>
 
@@ -102,12 +104,12 @@ export default function Projects() {
                     key={idx}
                     className={`
                       flex items-start gap-3 text-sm
-                      ${isRetro ? 'text-mario-brown/80' : 'text-gray-600'}
+                      ${isRetro ? 'text-mario-brown/80' : isDark ? 'text-gray-300' : 'text-gray-600'}
                     `}
                   >
                     <span className={`
                       mt-1.5 w-2 h-2 rounded-full shrink-0
-                      ${isRetro ? 'bg-mario-green' : 'bg-classic-accent'}
+                      ${isRetro ? 'bg-mario-green' : isDark ? 'bg-blue-400' : 'bg-classic-accent'}
                     `} />
                     {bullet}
                   </li>
@@ -116,7 +118,7 @@ export default function Projects() {
 
               {/* Tech Stack */}
               <div>
-                <h3 className={`text-sm font-semibold mb-2 ${isRetro ? 'text-pipe-dark' : 'text-gray-700'}`}>
+                <h3 className={`text-sm font-semibold mb-2 ${isRetro ? 'text-pipe-dark' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   Tech Stack
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -127,7 +129,9 @@ export default function Projects() {
                         px-2 py-1 rounded text-xs font-medium
                         ${isRetro 
                           ? 'bg-mario-green/10 text-pipe-dark' 
-                          : 'bg-gray-100 text-gray-700'
+                          : isDark
+                            ? 'bg-gray-700 text-gray-300'
+                            : 'bg-gray-100 text-gray-700'
                         }
                       `}
                     >
@@ -162,7 +166,9 @@ export default function Projects() {
                       p-2 rounded-lg transition-colors
                       ${isRetro 
                         ? 'text-mario-brown hover:bg-mario-green/10' 
-                        : 'text-gray-600 hover:bg-gray-100'
+                        : isDark
+                          ? 'text-gray-400 hover:bg-gray-700'
+                          : 'text-gray-600 hover:bg-gray-100'
                       }
                     `}
                     aria-label={`View ${project.title} demo (opens in new tab)`}
@@ -179,7 +185,9 @@ export default function Projects() {
                       p-2 rounded-lg transition-colors
                       ${isRetro 
                         ? 'text-mario-brown hover:bg-mario-green/10' 
-                        : 'text-gray-600 hover:bg-gray-100'
+                        : isDark
+                          ? 'text-gray-400 hover:bg-gray-700'
+                          : 'text-gray-600 hover:bg-gray-100'
                       }
                     `}
                     aria-label={`View ${project.title} source code (opens in new tab)`}
@@ -197,7 +205,7 @@ export default function Projects() {
       {filteredProjects.length === 0 && (
         <div className={`
           text-center py-12
-          ${isRetro ? 'text-mario-brown/60' : 'text-gray-500'}
+          ${isRetro ? 'text-mario-brown/60' : isDark ? 'text-gray-400' : 'text-gray-500'}
         `}>
           <p className="text-lg">No projects found matching your criteria.</p>
           <button

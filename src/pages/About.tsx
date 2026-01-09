@@ -5,7 +5,7 @@ import { useTheme } from '../context/ThemeContext'
 import { about, siteConfig } from '../data/content'
 
 export default function About() {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
 
   return (
     <PageShell
@@ -16,14 +16,14 @@ export default function About() {
       <section className="mb-12">
         <div className={`
           prose max-w-none
-          ${isRetro ? 'prose-brown' : 'prose-gray'}
+          ${isRetro ? 'prose-brown' : isDark ? 'prose-invert' : 'prose-gray'}
         `}>
           {about.bio.split('\n\n').map((paragraph, idx) => (
             <p
               key={idx}
               className={`
                 text-lg leading-relaxed mb-4
-                ${isRetro ? 'text-mario-brown/90' : 'text-gray-700'}
+                ${isRetro ? 'text-mario-brown/90' : isDark ? 'text-gray-300' : 'text-gray-700'}
               `}
             >
               {paragraph.trim()}
@@ -36,7 +36,7 @@ export default function About() {
       <section className="mb-12">
         <h2 className={`
           text-2xl font-display mb-6
-          ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+          ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
         `}>
           Quick Stats
         </h2>
@@ -47,13 +47,13 @@ export default function About() {
               <CardBody className="text-center py-6">
                 <div className={`
                   text-3xl sm:text-4xl font-display mb-2
-                  ${isRetro ? 'text-mario-green' : 'text-classic-accent'}
+                  ${isRetro ? 'text-mario-green' : isDark ? 'text-blue-400' : 'text-classic-accent'}
                 `}>
                   {highlight.value}
                 </div>
                 <div className={`
                   text-sm
-                  ${isRetro ? 'text-mario-brown/70' : 'text-gray-600'}
+                  ${isRetro ? 'text-mario-brown/70' : isDark ? 'text-gray-300' : 'text-gray-600'}
                 `}>
                   {highlight.label}
                 </div>
@@ -67,7 +67,7 @@ export default function About() {
       <section className="mb-12">
         <h2 className={`
           text-2xl font-display mb-6
-          ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+          ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
         `}>
           Education
         </h2>
@@ -79,12 +79,12 @@ export default function About() {
                 <div>
                   <h3 className={`
                     text-lg font-display
-                    ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+                    ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
                   `}>
                     {edu.degree}
                   </h3>
                   <p className={`
-                    ${isRetro ? 'text-pipe-dark' : 'text-classic-accent'}
+                    ${isRetro ? 'text-pipe-dark' : isDark ? 'text-blue-400' : 'text-classic-accent'}
                   `}>
                     {edu.school}
                   </p>
@@ -93,7 +93,9 @@ export default function About() {
                   px-4 py-2 rounded-lg text-sm font-medium
                   ${isRetro 
                     ? 'bg-mario-yellow/20 text-mario-brown' 
-                    : 'bg-gray-100 text-gray-700'
+                    : isDark
+                      ? 'bg-gray-700 text-gray-300'
+                      : 'bg-gray-100 text-gray-700'
                   }
                 `}>
                   {edu.year}
@@ -108,7 +110,7 @@ export default function About() {
       <section className="mb-12">
         <h2 className={`
           text-2xl font-display mb-6
-          ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+          ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
         `}>
           Related Coursework
         </h2>
@@ -121,7 +123,9 @@ export default function About() {
                 px-4 py-2 rounded-full text-sm font-medium
                 ${isRetro 
                   ? 'bg-mario-green/10 text-pipe-dark border-2 border-mario-green/20' 
-                  : 'bg-classic-accent/10 text-classic-accent'
+                  : isDark
+                    ? 'bg-blue-500/10 text-blue-400 border border-blue-500/30'
+                    : 'bg-classic-accent/10 text-classic-accent'
                 }
               `}
             >
@@ -135,7 +139,7 @@ export default function About() {
       <section>
         <h2 className={`
           text-2xl font-display mb-6
-          ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+          ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
         `}>
           Get In Touch
         </h2>
@@ -144,7 +148,7 @@ export default function About() {
           <CardBody>
             <p className={`
               mb-6
-              ${isRetro ? 'text-mario-brown/80' : 'text-gray-600'}
+              ${isRetro ? 'text-mario-brown/80' : isDark ? 'text-gray-300' : 'text-gray-600'}
             `}>
               I'm always open to discussing new opportunities, collaborations, or just having a chat about technology. Feel free to reach out!
             </p>

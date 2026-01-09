@@ -4,7 +4,7 @@ import { useTheme } from '../context/ThemeContext'
 import { experiences, skills } from '../data/content'
 
 export default function Experience() {
-  const { isRetro } = useTheme()
+  const { isRetro, isDark } = useTheme()
 
   return (
     <PageShell
@@ -22,19 +22,19 @@ export default function Experience() {
                   <div>
                     <h2 className={`
                       text-xl font-display
-                      ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+                      ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
                     `}>
                       {exp.title}
                     </h2>
                     <p className={`
                       text-lg font-medium
-                      ${isRetro ? 'text-pipe-dark' : 'text-classic-accent'}
+                      ${isRetro ? 'text-pipe-dark' : isDark ? 'text-blue-400' : 'text-classic-accent'}
                     `}>
                       {exp.company}
                     </p>
                     <p className={`
                       text-sm
-                      ${isRetro ? 'text-mario-brown/60' : 'text-gray-500'}
+                      ${isRetro ? 'text-mario-brown/60' : isDark ? 'text-gray-400' : 'text-gray-500'}
                     `}>
                       {exp.location}
                     </p>
@@ -43,7 +43,9 @@ export default function Experience() {
                     px-4 py-2 rounded-lg text-sm font-medium shrink-0
                     ${isRetro 
                       ? 'bg-mario-yellow/20 text-mario-brown' 
-                      : 'bg-gray-100 text-gray-700'
+                      : isDark
+                        ? 'bg-gray-700 text-gray-300'
+                        : 'bg-gray-100 text-gray-700'
                     }
                   `}>
                     {exp.startDate} — {exp.endDate}
@@ -57,12 +59,12 @@ export default function Experience() {
                       key={idx}
                       className={`
                         flex items-start gap-3 text-sm
-                        ${isRetro ? 'text-mario-brown/80' : 'text-gray-600'}
+                        ${isRetro ? 'text-mario-brown/80' : isDark ? 'text-gray-300' : 'text-gray-600'}
                       `}
                     >
                       <span className={`
                         mt-1.5 w-2 h-2 rounded-full shrink-0
-                        ${isRetro ? 'bg-mario-green' : 'bg-classic-accent'}
+                        ${isRetro ? 'bg-mario-green' : isDark ? 'bg-blue-400' : 'bg-classic-accent'}
                       `} />
                       {bullet}
                     </li>
@@ -71,7 +73,7 @@ export default function Experience() {
 
                 {/* Technologies */}
                 {exp.technologies && (
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
+                  <div className={`flex flex-wrap gap-2 pt-4 border-t ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
                     {exp.technologies.map(tech => (
                       <span
                         key={tech}
@@ -79,7 +81,9 @@ export default function Experience() {
                           px-2 py-1 rounded text-xs font-medium
                           ${isRetro 
                             ? 'bg-mario-green/10 text-pipe-dark' 
-                            : 'bg-gray-100 text-gray-700'
+                            : isDark
+                              ? 'bg-gray-700 text-gray-300'
+                              : 'bg-gray-100 text-gray-700'
                           }
                         `}
                       >
@@ -98,7 +102,7 @@ export default function Experience() {
       <section>
         <h2 className={`
           text-2xl font-display mb-6
-          ${isRetro ? 'text-mario-brown' : 'text-gray-900'}
+          ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
         `}>
           Skills & Technologies
         </h2>
@@ -109,7 +113,7 @@ export default function Experience() {
               <CardBody>
                 <h3 className={`
                   text-lg font-display mb-4
-                  ${isRetro ? 'text-pipe-dark' : 'text-classic-accent'}
+                  ${isRetro ? 'text-pipe-dark' : isDark ? 'text-blue-400' : 'text-classic-accent'}
                 `}>
                   {category.category}
                 </h3>
