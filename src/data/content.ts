@@ -14,7 +14,7 @@ export const siteConfig = {
   // tagline: "Building impactful solutions with code and creativity",
   
   // Your email address
-  email: "your.email@example.com",
+  email: "siddharth.korukonda.sk@gmail.com",
   
   // Link to your resume PDF (can be a Google Drive link, Dropbox, or hosted file)
   resumeUrl: "https://example.com/resume.pdf",
