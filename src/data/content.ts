@@ -112,48 +112,18 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    id: "exp-1",
-    title: "Senior Software Engineer",
-    company: "Tech Company Inc.",
-    location: "San Francisco, CA",
-    startDate: "Jan 2023",
+    id: "exp-sbu-hospital",
+    title: "Software Developer",
+    company: "Stony Brook University Hospital",
+    location: "Stony Brook, NY",
+    startDate: "Jan 2025",
     endDate: "Present",
     bullets: [
-      "Led development of microservices architecture serving 1M+ daily active users",
-      "Reduced API response times by 60% through caching optimization and query improvements",
-      "Mentored 4 junior engineers, conducting weekly code reviews and 1:1 sessions",
-      "Drove adoption of TypeScript across the frontend team, reducing production bugs by 35%",
+      "Design and build the hospital website in React and Flask, create reusable UI components, develop secure APIs, manage SQL and NoSQL data, implement login and roles, and keep pages fast and accessible",
+      "Collaborate with BS/MD and pre-med students to analyze de-identified patient records, curate datasets, and train/evaluate clinical AI models, incorporating feedback to improve model quality",
+      "Write clear docs, help teammates and staff use the tools, watch error logs, and fix issues to keep everything stable",
     ],
-    technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "Redis", "AWS"],
-  },
-  {
-    id: "exp-2",
-    title: "Software Engineer",
-    company: "Startup Labs",
-    location: "New York, NY",
-    startDate: "Jun 2021",
-    endDate: "Dec 2022",
-    bullets: [
-      "Built core features for a SaaS platform from 0 to 10K users in 18 months",
-      "Implemented CI/CD pipeline reducing deployment time from 2 hours to 15 minutes",
-      "Designed and developed RESTful APIs consumed by web and mobile clients",
-      "Collaborated with product team to define technical requirements and sprint planning",
-    ],
-    technologies: ["JavaScript", "React", "Python", "Django", "Docker", "GCP"],
-  },
-  {
-    id: "exp-3",
-    title: "Software Engineering Intern",
-    company: "Big Tech Co",
-    location: "Seattle, WA",
-    startDate: "May 2020",
-    endDate: "Aug 2020",
-    bullets: [
-      "Developed internal tool that automated report generation, saving 10 hours/week",
-      "Contributed to open-source SDK used by 500+ developers",
-      "Presented project demo to 100+ engineers at end-of-internship showcase",
-    ],
-    technologies: ["Java", "Spring Boot", "React", "AWS Lambda"],
+    technologies: ["React", "Flask", "SQL", "NoSQL", "REST APIs", "Authentication"],
   },
 ]
 
