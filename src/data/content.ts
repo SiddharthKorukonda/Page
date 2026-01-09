@@ -5,7 +5,7 @@
 
 export const siteConfig = {
   // Your name as displayed across the site
-  name: "Your Name",
+  name: "Siddharth Korukonda",
   
   // Your professional role/title
   role: "Software Engineer",
