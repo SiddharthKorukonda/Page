@@ -20,7 +20,7 @@ export const siteConfig = {
   resumeUrl: "https://example.com/resume.pdf",
   
   // Your LinkedIn profile URL
-  linkedinUrl: "https://linkedin.com/in/yourprofile",
+  linkedinUrl: "https://www.linkedin.com/in/siddharth-korukonda",
   
   // Your GitHub profile URL
   githubUrl: "https://github.com/SiddharthKorukonda",
