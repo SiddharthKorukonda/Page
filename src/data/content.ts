@@ -63,6 +63,21 @@ export const projects: Project[] = [
     links: {},
     featured: true,
   },
+  {
+    id: "fastfacts",
+    title: "FastFacts - Real-Time AI Fact-Checking Desktop App",
+    date: "October 2025",
+    bullets: [
+      "Developed a desktop application that performs real-time fact-checking on live system audio using an agentic AI workflow",
+      "Implemented an automated pipeline with OpenAI Speech-to-Text for transcription, Gemini for claim detection, and Tavily MCP for retrieving reputable online sources",
+      "Used Gemini to analyze evidence and classify claims as true, false, or unsubstantiated, returning a final verdict upon session completion",
+      "Integrated Comet's Opik to evaluate LLM outputs, ensuring consistency, reliability, and explainability across all agent interactions",
+    ],
+    techStack: ["Electron", "React", "Flask", "Opik", "LangChain", "Tavily", "Gemini", "OpenAI Speech-to-Text"],
+    tags: ["AI/ML", "Desktop App", "LangChain"],
+    links: {},
+    featured: true,
+  },
 ]
 
 // ============================================
