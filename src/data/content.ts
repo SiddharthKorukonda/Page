@@ -243,6 +243,22 @@ export const awards: Award[] = [
     date: "October 2025",
     sortOrder: 202510,
   },
+  {
+    id: "cert-jpmc-swe",
+    name: "Software Engineer Job Simulation",
+    organization: "JP Morgan Chase",
+    description: "Completed virtual job simulation program",
+    date: "September 2025",
+    sortOrder: 202509,
+  },
+  {
+    id: "cert-jpmc-quant",
+    name: "Quantitative Research Job Simulation",
+    organization: "JP Morgan Chase",
+    description: "Completed virtual job simulation program",
+    date: "June 2025",
+    sortOrder: 202506,
+  },
 ]
 
 // ============================================
