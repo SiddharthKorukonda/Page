@@ -6,7 +6,7 @@ const navItems = [
   { to: '/projects', label: 'Projects', icon: <CodeIcon size={24} />, variant: 'default' as const },
   { to: '/experience', label: 'Experience', icon: <BriefcaseIcon size={24} />, variant: 'default' as const },
   { to: '/research', label: 'Research', icon: <BookIcon size={24} />, variant: 'gold' as const },
-  { to: '/awards', label: 'Awards', icon: <TrophyIcon size={24} />, variant: 'gold' as const },
+  { to: '/awards', label: 'Distinctions', icon: <TrophyIcon size={24} />, variant: 'gold' as const },
   { to: '/about', label: 'About', icon: <UserIcon size={24} />, variant: 'red' as const },
 ]
 

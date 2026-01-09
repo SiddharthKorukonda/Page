@@ -11,8 +11,8 @@ export default function Awards() {
 
   return (
     <PageShell
-      title="Awards"
-      subtitle="Recognitions and achievements along my journey"
+      title="Distinctions"
+      subtitle="Honors, awards, and certifications along my journey"
     >
       <div className="space-y-12">
         {Array.from(awardsByYear.entries()).map(([year, yearAwards]) => (
