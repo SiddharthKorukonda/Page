@@ -281,8 +281,7 @@ The theme is also my creativity, so hope you enjoy exploring :)`,
 
   highlights: [
     { label: "Hackathon Awards", value: "4" },
-    { label: "Projects Built", value: "10+" },
-    { label: "Research Areas", value: "2" },
+    { label: "Projects Built", value: "3" },
     { label: "Certifications", value: "2" },
   ],
 
