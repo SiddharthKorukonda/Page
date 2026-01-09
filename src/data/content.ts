@@ -267,39 +267,38 @@ export const awards: Award[] = [
 // ============================================
 
 export const about = {
-  bio: `I'm a software engineer passionate about building products that make a difference. 
-  With a strong foundation in full-stack development and machine learning, I enjoy tackling 
-  complex problems and turning them into elegant solutions.
+  bio: `I'm a Computer Science and Economics student at Stony Brook University with a strong focus on artificial intelligence, distributed systems, and applied machine learning. I enjoy building end-to-end systems that move from research ideas to real, deployed products, especially in safety-critical and data-intensive environments.
 
-  When I'm not coding, you'll find me contributing to open-source projects, mentoring 
-  aspiring developers, or exploring the latest advancements in AI. I believe in 
-  writing clean, maintainable code and creating inclusive technology that serves everyone.`,
+My work spans full-stack development and AI research, including building production web platforms for Stony Brook University Hospital, contributing to secure distributed learning research under adversarial conditions, and developing real-time multimodal AI systems that combine computer vision, NLP, and agentic reasoning. I've led and contributed to award-winning projects at national hackathons, where my teams were recognized for effective AI orchestration, evaluation, and scalable system design.
+
+Technically, I work across Python, Java, C and JavaScript, with experience in frameworks such as React, Flask, Spring Boot, PyTorch, and cloud-native tools like Docker, Kubernetes, and Snowflake. I care deeply about building systems that are not only intelligent, but reliable, interpretable, and usable by real people.
+
+I'm currently seeking opportunities in software engineering, AI and ML, and applied data science where I can work on challenging problems, learn from strong engineers and researchers, and build technology with real-world impact.
+
+This site is a collection of my work, projects, and experiments as I continue growing as an engineer and researcher.
+
+The theme is also my creativity, so hope you enjoy exploring :)`,
 
   highlights: [
-    { label: "Years of Experience", value: "5+" },
-    { label: "Projects Completed", value: "30+" },
-    { label: "Research Papers", value: "3" },
-    { label: "Open Source Contributions", value: "100+" },
+    { label: "Hackathon Awards", value: "4" },
+    { label: "Projects Built", value: "10+" },
+    { label: "Research Areas", value: "2" },
+    { label: "Certifications", value: "2" },
   ],
 
   interests: [
-    "Machine Learning",
+    "Artificial Intelligence",
     "Distributed Systems",
-    "Open Source",
-    "Developer Tools",
-    "Technical Writing",
+    "Machine Learning",
+    "Full-Stack Development",
+    "Data Science",
   ],
 
   education: [
     {
-      degree: "M.S. Computer Science",
-      school: "Stanford University",
-      year: "2023",
-    },
-    {
-      degree: "B.S. Computer Science",
-      school: "UC Berkeley",
-      year: "2021",
+      degree: "B.S. Computer Science (AI/DS) & Economics",
+      school: "Stony Brook University",
+      year: "Expected 2027",
     },
   ],
 }
