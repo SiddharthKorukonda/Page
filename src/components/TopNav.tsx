@@ -1,10 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
-import { ResumeIcon, LinkedInIcon, GitHubIcon, EmailIcon, GamepadIcon, SunIcon, HomeIcon } from './icons'
+import { ResumeIcon, LinkedInIcon, GitHubIcon, EmailIcon, GamepadIcon, SunIcon, MoonIcon, HomeIcon } from './icons'
 import { siteConfig } from '../data/content'
 
 export default function TopNav() {
-  const { theme, toggleTheme, isRetro } = useTheme()
+  const { theme, toggleTheme, isRetro, isDark, toggleDark } = useTheme()
   const location = useLocation()
   const isHome = location.pathname === '/'
 
@@ -14,7 +14,9 @@ export default function TopNav() {
         sticky top-0 z-50 w-full px-4 sm:px-6 lg:px-8 py-4
         ${isRetro 
           ? 'bg-gradient-to-r from-mario-blue/90 to-sky-mid/90 backdrop-blur-md border-b-4 border-mario-brown' 
-          : 'bg-white/90 backdrop-blur-md border-b border-gray-200'
+          : isDark
+            ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700'
+            : 'bg-white/90 backdrop-blur-md border-b border-gray-200'
         }
       `}
       role="navigation"
@@ -30,7 +32,9 @@ export default function TopNav() {
                 p-2 rounded-lg transition-all duration-200
                 ${isRetro 
                   ? 'hover:bg-white/20 text-white' 
-                  : 'hover:bg-gray-100 text-gray-700'
+                  : isDark
+                    ? 'hover:bg-gray-700 text-gray-300'
+                    : 'hover:bg-gray-100 text-gray-700'
                 }
               `}
               aria-label="Go to home"
@@ -42,13 +46,13 @@ export default function TopNav() {
           <Link to="/" className="flex flex-col">
             <span className={`
               font-display text-lg sm:text-xl font-bold
-              ${isRetro ? 'text-white text-shadow-retro' : 'text-gray-900'}
+              ${isRetro ? 'text-white text-shadow-retro' : isDark ? 'text-white' : 'text-gray-900'}
             `}>
               {siteConfig.name}
             </span>
             <span className={`
               text-xs sm:text-sm
-              ${isRetro ? 'text-white/80' : 'text-gray-500'}
+              ${isRetro ? 'text-white/80' : isDark ? 'text-gray-400' : 'text-gray-500'}
             `}>
               {siteConfig.role}
             </span>
@@ -64,7 +68,9 @@ export default function TopNav() {
               p-2 sm:p-2.5 rounded-lg transition-all duration-200
               ${isRetro 
                 ? 'bg-mario-yellow text-mario-brown hover:bg-yellow-300' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                : isDark
+                  ? 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }
             `}
             aria-label={`Switch to ${theme === 'retro' ? 'classic' : 'retro'} mode`}
@@ -72,6 +78,24 @@ export default function TopNav() {
           >
             {isRetro ? <SunIcon size={18} /> : <GamepadIcon size={18} />}
           </button>
+
+          {/* Dark mode toggle - only in classic mode */}
+          {!isRetro && (
+            <button
+              onClick={toggleDark}
+              className={`
+                p-2 sm:p-2.5 rounded-lg transition-all duration-200
+                ${isDark
+                  ? 'bg-yellow-400 text-gray-900 hover:bg-yellow-300'
+                  : 'bg-gray-800 text-yellow-400 hover:bg-gray-700'
+                }
+              `}
+              aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+              title={`Switch to ${isDark ? 'Light' : 'Dark'} Mode`}
+            >
+              {isDark ? <SunIcon size={18} /> : <MoonIcon size={18} />}
+            </button>
+          )}
 
           <div className="w-px h-6 bg-current opacity-20" />
 
@@ -82,7 +106,9 @@ export default function TopNav() {
               p-2 sm:p-2.5 rounded-lg transition-all duration-200
               ${isRetro 
                 ? 'bg-white/20 text-white hover:bg-white/30' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                : isDark
+                  ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }
             `}
             aria-label="View Resume"
@@ -99,7 +125,9 @@ export default function TopNav() {
               p-2 sm:p-2.5 rounded-lg transition-all duration-200
               ${isRetro 
                 ? 'bg-white/20 text-white hover:bg-white/30' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                : isDark
+                  ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }
             `}
             aria-label="LinkedIn Profile (opens in new tab)"
@@ -116,7 +144,9 @@ export default function TopNav() {
               p-2 sm:p-2.5 rounded-lg transition-all duration-200
               ${isRetro 
                 ? 'bg-white/20 text-white hover:bg-white/30' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                : isDark
+                  ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }
             `}
             aria-label="GitHub Profile (opens in new tab)"
@@ -131,7 +161,9 @@ export default function TopNav() {
               p-2 sm:p-2.5 rounded-lg transition-all duration-200
               ${isRetro 
                 ? 'bg-white/20 text-white hover:bg-white/30' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                : isDark
+                  ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }
             `}
             aria-label="Send Email"
