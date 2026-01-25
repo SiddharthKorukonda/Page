@@ -190,9 +190,9 @@ export default function Projects() {
                     <ExternalLinkIcon size={18} />
                   </a>
                 )}
-                {project.links.github && (
+                {(project.links.github || project.links.githubRepo) && (
                   <a
-                    href={project.links.github}
+                    href={project.links.github || project.links.githubRepo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`
