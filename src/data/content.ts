@@ -84,7 +84,7 @@ export const projects: Project[] = [
   },
   {
     id: "sbu-care-connect",
-    title: "SBU Care Connect - Website App for the Stony Brook Hospital Free Clinic",
+    title: "NourishAI",
     date: "January 2025",
     bullets: [
       "Built a React frontend with a map API that lets patients search the nearest Stony Brook Hospital partner by address, and added a chat box powered by an OpenAI LLM for patient guidance",
