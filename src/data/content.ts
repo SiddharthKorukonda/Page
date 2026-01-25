@@ -90,7 +90,7 @@ export const projects: Project[] = [
     techStack: ["React", "Map API", "Flask", "SQL", "NoSQL", "OpenAI API", "Auth/JWT"],
     tags: ["Full Stack", "Healthcare", "AI/ML"],
     links: {},
-    featured: true,
+    featured: false,
   },
 ]
 

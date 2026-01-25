@@ -67,7 +67,7 @@ export default function Projects() {
       {/* Projects grid */}
       <div className="grid gap-6 md:grid-cols-2">
         {filteredProjects.map((project) => (
-          <Card key={project.id} className={`flex flex-col ${project.featured ? 'md:col-span-2' : ''}`}>
+          <Card key={project.id} className="flex flex-col md:col-span-2">
             <CardBody className="flex-1">
               {/* Title, date, and featured badge */}
               <div className="flex items-start justify-between gap-4 mb-2">
