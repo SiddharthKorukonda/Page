@@ -61,7 +61,7 @@ export const projects: Project[] = [
     techStack: ["React", "Flask", "NeuralSeek", "Snowflake", "ElevenLabs", "OpenCV", "Gemini", "VADER", "WebRTC/RTSP", "Vultr"],
     tags: ["AI/ML", "Full Stack", "Real-Time"],
     links: {
-      github: "https://github.com/SiddharthKorukonda/SurveiLens",
+      github: "https://www.linkedin.com/feed/update/urn:li:activity:7394241662300073984/",
     },
     featured: true,
   },
