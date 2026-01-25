@@ -41,6 +41,7 @@ export interface Project {
   links: {
     demo?: string
     github?: string
+    githubRepo?: string // GitHub link for icon only (title won't be clickable)
     article?: string
   }
   image?: string // Optional: path to project thumbnail
@@ -94,7 +95,7 @@ export const projects: Project[] = [
     techStack: ["React", "Map API", "Flask", "SQL", "NoSQL", "OpenAI API", "Auth/JWT"],
     tags: ["Full Stack", "Healthcare", "AI/ML"],
     links: {
-      github: "https://github.com/SiddharthKorukonda/NourishAI",
+      githubRepo: "https://github.com/SiddharthKorukonda/NourishAI",
     },
     featured: false,
   },
