@@ -71,12 +71,26 @@ export default function Projects() {
             <CardBody className="flex-1">
               {/* Title, date, and featured badge */}
               <div className="flex items-start justify-between gap-4 mb-2">
-                <h2 className={`
-                  text-xl font-display
-                  ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
-                `}>
-                  {project.title}
-                </h2>
+                {project.links.github ? (
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`
+                      text-xl font-display hover:underline transition-colors
+                      ${isRetro ? 'text-mario-brown hover:text-pipe-dark' : isDark ? 'text-white hover:text-blue-400' : 'text-gray-900 hover:text-classic-accent'}
+                    `}
+                  >
+                    {project.title}
+                  </a>
+                ) : (
+                  <h2 className={`
+                    text-xl font-display
+                    ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
+                  `}>
+                    {project.title}
+                  </h2>
+                )}
                 {project.featured && (
                   <span className={`
                     px-3 py-1 rounded-full text-xs font-bold shrink-0
