@@ -77,7 +77,9 @@ export const projects: Project[] = [
     ],
     techStack: ["Electron", "React", "Flask", "Opik", "LangChain", "Tavily", "Gemini", "OpenAI Speech-to-Text"],
     tags: ["AI/ML", "Desktop App", "LangChain"],
-    links: {},
+    links: {
+      github: "https://github.com/SiddharthKorukonda/FastFacts",
+    },
     featured: true,
   },
   {
