@@ -196,7 +196,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`
-                      p-2 rounded-lg transition-colors
+                      p-2.5 rounded-lg transition-colors
                       ${isRetro 
                         ? 'text-mario-brown hover:bg-mario-green/10' 
                         : isDark
@@ -206,7 +206,7 @@ export default function Projects() {
                     `}
                     aria-label={`View ${project.title} source code (opens in new tab)`}
                   >
-                    <GitHubIcon size={18} />
+                    <GitHubIcon size={28} />
                   </a>
                 )}
               </div>
