@@ -59,14 +59,12 @@ export default function Awards() {
                       <div className="shrink-0 mt-1">
                         <div className={`
                           w-10 h-10 rounded-full flex items-center justify-center
-                          ${index === 0 
+                          ${index <= 1 
                             ? 'bg-mario-yellow' 
-                            : index === 1 
-                              ? 'bg-gray-300' 
-                              : 'bg-mario-orange/60'
+                            : 'bg-mario-orange/60'
                           }
                         `}>
-                          <Star size={20} color={index === 0 ? '#8B4513' : index === 1 ? '#666' : '#fff'} />
+                          <Star size={20} color={index <= 1 ? '#8B4513' : '#fff'} />
                         </div>
                       </div>
                     )}
