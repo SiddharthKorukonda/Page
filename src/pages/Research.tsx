@@ -1,8 +1,15 @@
+import type { ReactNode } from 'react'
 import PageShell from '../components/PageShell'
 import Card, { CardBody, CardFooter } from '../components/Card'
 import { ExternalLinkIcon } from '../components/icons'
 import { useTheme } from '../context/ThemeContext'
 import { research } from '../data/content'
+
+/** Renders text with **...** segments as bold */
+function parseBold(text: string): ReactNode {
+  const parts = text.split(/\*\*(.+?)\*\*/g)
+  return parts.map((part, i) => i % 2 === 1 ? <strong key={i}>{part}</strong> : part)
+}
 
 export default function Research() {
   const { isRetro, isDark } = useTheme()
@@ -67,7 +74,9 @@ export default function Research() {
                           mt-1.5 w-2 h-2 rounded-full shrink-0
                           ${isRetro ? 'bg-mario-green' : isDark ? 'bg-blue-400' : 'bg-classic-accent'}
                         `} />
-                        {bullet}
+                        <span className="min-w-0 flex-1">
+                          {parseBold(bullet)}
+                        </span>
                       </li>
                     ))}
                   </ul>
