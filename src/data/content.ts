@@ -207,10 +207,13 @@ export const skills: SkillCategory[] = [
 export interface Research {
   id: string
   title: string
-  venue: string // Conference name, journal, or "In Progress"
+  venue: string
+  date: string // e.g., "2025 – 2026"
   authors: string[]
   myRole: string
   summary: string
+  bullets?: string[]
+  technologies?: string[]
   link?: string
   year: number
 }
@@ -219,10 +222,17 @@ export const research: Research[] = [
   {
     id: "research-nflpa",
     title: "NFLPA Analytics – Special Teams Workload and Injury Risk",
-    venue: "NFL Players Association (2025–2026) — Python, DuckDB, Statsmodels, Poisson and Negative Binomial GLMs, Fixed Effects",
+    venue: "NFL Players Association",
+    date: "2025 – 2026",
     authors: ["Siddharth Korukonda"],
     myRole: "Researcher analyzing special teams workload and next-week injury risk using fixed-effects GLMs and validated inference.",
-    summary: "Analyzed special teams workload and next-week injury risk using 5,950 NFL team-weeks, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference. Shock workload weeks raised next-week injury probability by 2.52 pp (offense) and 1.39 pp (defense), while workload volatility (25th–75th percentile) increased offensive injury risk by 2.46 pp with no meaningful defensive effect. League-level scaling implies +8.8 offensive and +5.7 defensive injuries per season attributable to shock workloads; results documented in a research paper submitted to the NFL Players Association.",
+    summary: "Analyzed special teams workload and next-week injury risk using 5,950 NFL team-weeks, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
+    bullets: [
+      "Analyzed special teams workload and next-week injury risk using 5,950 NFL team-weeks, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
+      "Shock workload weeks raised next-week injury probability by 2.52 pp (offense) and 1.39 pp (defense), while workload volatility (25th–75th percentile) increased offensive injury risk by 2.46 pp with no meaningful defensive effect.",
+      "League-level scaling implies +8.8 offensive and +5.7 defensive injuries per season attributable to shock workloads; results documented in a research paper submitted to the NFL Players Association.",
+    ],
+    technologies: ["Python", "DuckDB", "Statsmodels", "Poisson and Negative Binomial GLMs", "Fixed Effects"],
     year: 2026,
   },
 ]
