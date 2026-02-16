@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import PageShell from '../components/PageShell'
 import Card, { CardBody, CardFooter } from '../components/Card'
-import { ExternalLinkIcon } from '../components/icons'
+import { ExternalLinkIcon, LinkedInIcon } from '../components/icons'
 import { useTheme } from '../context/ThemeContext'
 import { research } from '../data/content'
 
@@ -112,24 +112,46 @@ export default function Research() {
                 )}
               </CardBody>
 
-              {paper.link && (
-                <CardFooter className="flex justify-end">
-                  <a
-                    href={paper.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`
-                      inline-flex items-center gap-2 px-4 py-2 rounded-lg
-                      text-sm font-medium transition-colors
-                      ${isRetro 
-                        ? 'bg-mario-green text-white hover:bg-pipe-dark' 
-                        : 'bg-classic-accent text-white hover:bg-blue-600'
-                      }
-                    `}
-                  >
-                    Read Paper
-                    <ExternalLinkIcon size={16} />
-                  </a>
+              {(paper.link || paper.linkedinUrl) && (
+                <CardFooter className="flex items-center justify-end gap-2">
+                  {paper.link && (
+                    <a
+                      href={paper.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`
+                        inline-flex items-center gap-2 px-4 py-2 rounded-lg
+                        text-sm font-medium transition-colors
+                        ${isRetro 
+                          ? 'bg-mario-green text-white hover:bg-pipe-dark' 
+                          : 'bg-classic-accent text-white hover:bg-blue-600'
+                        }
+                      `}
+                    >
+                      Read Paper
+                      <ExternalLinkIcon size={16} />
+                    </a>
+                  )}
+                  {paper.linkedinUrl && (
+                    <a
+                      href={paper.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`
+                        p-2.5 rounded-lg transition-colors
+                        ${isRetro 
+                          ? 'text-mario-brown hover:bg-mario-green/10' 
+                          : isDark
+                            ? 'text-gray-400 hover:bg-gray-700'
+                            : 'text-gray-600 hover:bg-gray-100'
+                        }
+                      `}
+                      aria-label="View LinkedIn post about this research"
+                      title="LinkedIn Post"
+                    >
+                      <LinkedInIcon size={28} />
+                    </a>
+                  )}
                 </CardFooter>
               )}
             </Card>
