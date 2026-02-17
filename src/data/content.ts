@@ -234,6 +234,7 @@ export const research: Research[] = [
       "League-level scaling implies **+8.8** **offensive** and **+5.7** **defensive** injuries per season attributable to shock workloads; results documented in a research paper submitted to the NFL Players Association.",
     ],
     technologies: ["Python", "DuckDB", "Statsmodels", "Poisson and Negative Binomial GLMs", "Fixed Effects"],
+    link: "./Special Teams Workload Volatility and Next Week Injury Risk in the NFL.pdf",
     linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7421059283984850944/",
     year: 2026,
   },
