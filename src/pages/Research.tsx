@@ -27,12 +27,26 @@ export default function Research() {
                 {/* Header: title + date pill (same as Experience) */}
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
                   <div>
-                    <h2 className={`
-                      text-xl font-display
-                      ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
-                    `}>
-                      {paper.title}
-                    </h2>
+                    {paper.link ? (
+                      <a
+                        href={paper.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`
+                          text-xl font-display hover:underline transition-colors
+                          ${isRetro ? 'text-mario-brown hover:text-pipe-dark' : isDark ? 'text-white hover:text-blue-400' : 'text-gray-900 hover:text-classic-accent'}
+                        `}
+                      >
+                        {paper.title}
+                      </a>
+                    ) : (
+                      <h2 className={`
+                        text-xl font-display
+                        ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
+                      `}>
+                        {paper.title}
+                      </h2>
+                    )}
                     <p className={`
                       text-lg font-medium
                       ${isRetro ? 'text-pipe-dark' : isDark ? 'text-blue-400' : 'text-classic-accent'}
