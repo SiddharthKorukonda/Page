@@ -230,7 +230,7 @@ export const research: Research[] = [
     summary: "Analyzed special teams workload and next-week injury risk using 5,950 NFL team-weeks, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
     bullets: [
       "Analyzed special teams workload and next-week injury risk using **5,950** **NFL team-weeks**, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
-      "Shock workload weeks raised next-week injury probability by **2.52** **pp (offense)** and **1.39** **pp (defense)**, while workload volatility (25th–75th percentile) increased offensive injury risk by **2.46** pp with no meaningful defensive effect.",
+      "Shock workload weeks raised next-week injury probability by **2.52** **pp (offense)** and **1.39** **pp (defense)**, while workload volatility (25th–75th percentile) increased offensive injury risk by **2.46** **pp** with no meaningful defensive effect.",
       "League-level scaling implies **+8.8** **offensive** and **+5.7** **defensive** injuries per season attributable to shock workloads; results documented in a research paper submitted to the NFL Players Association.",
     ],
     technologies: ["Python", "DuckDB", "Statsmodels", "Poisson and Negative Binomial GLMs", "Fixed Effects"],
