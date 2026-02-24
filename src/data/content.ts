@@ -256,6 +256,14 @@ export interface Award {
 
 export const awards: Award[] = [
   {
+    id: "award-hopperhacks-2026",
+    name: "HopperHacks 2026",
+    organization: "Stony Brook University",
+    description: "• Best Usage of ElevenLabs",
+    date: "February 2026",
+    sortOrder: 202602,
+  },
+  {
     id: "award-sbuhacks-2025",
     name: "SBUHacks 2025",
     organization: "Stony Brook University",
