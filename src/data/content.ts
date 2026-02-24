@@ -299,7 +299,7 @@ export const awards: Award[] = [
     id: "award-aime-2022",
     name: "American Invitational Mathematics Examination",
     organization: "The Bronx High School of Science",
-    description: "• AIME - 5\n• AMC 12B - 106.5",
+    description: "• AIME - 5\n• AMC 12B - 106.5\n• Total - 156.5",
     date: "February 2022",
     sortOrder: 202202,
   },
