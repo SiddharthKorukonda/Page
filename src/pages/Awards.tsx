@@ -57,7 +57,7 @@ export default function Awards() {
                           </div>
                         ) : award.id === 'award-aime-2022' ? (
                           <div className="w-10 h-10 rounded-full flex items-center justify-center bg-red-600/90">
-                            <Star size={20} color="#E0115F" />
+                            <Star size={20} color="#FECDD3" />
                           </div>
                         ) : (
                           <div className={`
