@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import PageShell from '../components/PageShell'
 import Card, { CardBody } from '../components/Card'
 import Star from '../components/svg/Star'
+import Diamond from '../components/svg/Diamond'
 import { useTheme } from '../context/ThemeContext'
 import { getSortedAwards, Award } from '../data/content'
 
@@ -50,15 +51,21 @@ export default function Awards() {
                     {/* Trophy/Star icon */}
                     {isRetro && (
                       <div className="shrink-0 mt-1">
-                        <div className={`
-                          w-10 h-10 rounded-full flex items-center justify-center
-                          ${index <= 1 
-                            ? 'bg-mario-yellow' 
-                            : 'bg-mario-orange/60'
-                          }
-                        `}>
-                          <Star size={20} color={index <= 1 ? '#8B4513' : '#fff'} />
-                        </div>
+                        {(award.id === 'cert-jpmc-swe' || award.id === 'cert-jpmc-quant') ? (
+                          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-blue-500/90">
+                            <Diamond size={20} color="#BFDBFE" />
+                          </div>
+                        ) : (
+                          <div className={`
+                            w-10 h-10 rounded-full flex items-center justify-center
+                            ${index <= 1 
+                              ? 'bg-mario-yellow' 
+                              : 'bg-mario-orange/60'
+                            }
+                          `}>
+                            <Star size={20} color={index <= 1 ? '#8B4513' : '#fff'} />
+                          </div>
+                        )}
                       </div>
                     )}
 
