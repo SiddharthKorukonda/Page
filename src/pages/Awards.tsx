@@ -40,13 +40,6 @@ export default function Awards() {
                 flex-1 h-px
                 ${isRetro ? 'bg-mario-brown/20' : isDark ? 'bg-gray-700' : 'bg-gray-200'}
               `} />
-              {isRetro && (
-                <div className="flex gap-1">
-                  {[...Array(Math.min(yearAwards.length, 5))].map((_, i) => (
-                    <Star key={i} size={20} className="animate-bounce-subtle" />
-                  ))}
-                </div>
-              )}
             </div>
 
             {/* Awards list for this year */}
