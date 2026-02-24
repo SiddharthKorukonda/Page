@@ -55,6 +55,10 @@ export default function Awards() {
                           <div className="w-10 h-10 rounded-full flex items-center justify-center bg-blue-500/90">
                             <Diamond size={20} color="#BFDBFE" />
                           </div>
+                        ) : award.id === 'award-aime-2022' ? (
+                          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-red-600/90">
+                            <Star size={20} color="#E0115F" />
+                          </div>
                         ) : (
                           <div className={`
                             w-10 h-10 rounded-full flex items-center justify-center
