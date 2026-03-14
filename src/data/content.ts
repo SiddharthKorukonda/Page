@@ -50,6 +50,25 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "camguard",
+    title: "CamGuard - Agentic Fall Triage & Response System",
+    date: "February 2026",
+    bullets: [
+      "Built a multimodal, agentic AI safety system that integrates computer vision and LLM reasoning to proactively detect bed fall risks for elderly individuals and infants",
+      "Implemented a full pipeline spanning real-time video ingestion, pose and boundary detection with OpenCV, contextual reasoning with Gemini, and structured incident logging and analytics in Snowflake",
+      "Designed Snowflake databases to store incident timelines, agent decisions, confidence scores, and configuration states, then transformed that data into training inputs for a RAG-based chatbot that lets users dynamically adjust system objectives through natural language without manual backend changes",
+      "Created staging tables and export pipelines to push curated datasets to DigitalOcean for continuous machine learning retraining and LLM fine-tuning on real-world outcomes",
+      "Integrated ElevenLabs for real-time AI voice synthesis, enabling context-aware safety alerts that translate model reasoning into clear, human-readable escalation responses",
+    ],
+    techStack: ["React Native", "Flask", "OpenCV", "Gemini", "Snowflake", "DigitalOcean", "Python", "WebSockets", "ElevenLabs"],
+    tags: ["AI/ML", "Computer Vision", "Real-Time"],
+    links: {
+      github: "https://github.com/SiddharthKorukonda/CamGuard",
+      article: "https://www.linkedin.com/feed/update/urn:li:activity:7432292605763354624/",
+    },
+    featured: true,
+  },
+  {
     id: "surveilens",
     title: "SurveiLens - Real-Time AI Safety Platform",
     date: "November 2025",
