@@ -119,6 +119,20 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "exp-sbu-ta",
+    title: "Undergraduate Teaching Assistant",
+    company: "Stony Brook University",
+    location: "Stony Brook, NY",
+    startDate: "Jan 2026",
+    endDate: "Present",
+    bullets: [
+      "Created assignments and labs for CSE 220 (System Fundamentals I).",
+      "Delivered assistance to students in lectures of approximately 200 students.",
+      "Graded assignments and held weekly recitations and office hours.",
+    ],
+    technologies: ["C", "Assembly", "System Programming"],
+  },
+  {
     id: "exp-sbu-hospital",
     title: "Software Developer",
     company: "Stony Brook University Hospital",
@@ -145,20 +159,6 @@ export const experiences: Experience[] = [
       "Enabled stable updates with 93% agent interaction through controlled neighborhood protocols",
     ],
     technologies: ["Distributed Systems", "Machine Learning", "Byzantine Fault Tolerance"],
-  },
-  {
-    id: "exp-sbu-ta",
-    title: "Undergraduate Teaching Assistant",
-    company: "Stony Brook University",
-    location: "Stony Brook, NY",
-    startDate: "Aug 2024",
-    endDate: "May 2025",
-    bullets: [
-      "Created assignments and labs for CSE 220 (System Fundamentals I)",
-      "Delivered assistance to students in lectures of approximately 200 students",
-      "Graded assignments and held weekly recitations and office hours",
-    ],
-    technologies: ["C", "Assembly", "System Programming"],
   },
 ]
 
