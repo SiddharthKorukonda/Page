@@ -50,6 +50,23 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "surveilens",
+    title: "SurveiLens - Real-Time AI Safety Platform",
+    date: "November 2025",
+    bullets: [
+      "Integrated OpenCV video analysis and ElevenLabs audio transcription through Gemini reasoning to generate real-time risk assessments",
+      "Enhanced detection precision by combining object tracking, action recognition, and VADER sentiment to minimize false positives",
+      "Enabled multi-device connectivity by streaming RTSP/WebRTC snapshots to Flask and syncing event data into Snowflake for analysis",
+      "Leveraged NeuralSeek to coordinate multimodal AI pipelines, enforce risk-based policies, and broadcast alerts to the live monitoring dashboard",
+    ],
+    techStack: ["React", "Flask", "NeuralSeek", "Snowflake", "ElevenLabs", "OpenCV", "Gemini", "VADER", "WebRTC/RTSP", "Vultr"],
+    tags: ["AI/ML", "Full Stack", "Real-Time"],
+    links: {
+      github: "https://www.linkedin.com/feed/update/urn:li:activity:7394241662300073984/",
+    },
+    featured: true,
+  },
+  {
     id: "camguard",
     title: "CamGuard - Agentic Fall Triage & Response System",
     date: "February 2026",
@@ -67,23 +84,6 @@ export const projects: Project[] = [
       article: "https://www.linkedin.com/feed/update/urn:li:activity:7432292605763354624/",
     },
     featured: false,
-  },
-  {
-    id: "surveilens",
-    title: "SurveiLens - Real-Time AI Safety Platform",
-    date: "November 2025",
-    bullets: [
-      "Integrated OpenCV video analysis and ElevenLabs audio transcription through Gemini reasoning to generate real-time risk assessments",
-      "Enhanced detection precision by combining object tracking, action recognition, and VADER sentiment to minimize false positives",
-      "Enabled multi-device connectivity by streaming RTSP/WebRTC snapshots to Flask and syncing event data into Snowflake for analysis",
-      "Leveraged NeuralSeek to coordinate multimodal AI pipelines, enforce risk-based policies, and broadcast alerts to the live monitoring dashboard",
-    ],
-    techStack: ["React", "Flask", "NeuralSeek", "Snowflake", "ElevenLabs", "OpenCV", "Gemini", "VADER", "WebRTC/RTSP", "Vultr"],
-    tags: ["AI/ML", "Full Stack", "Real-Time"],
-    links: {
-      github: "https://www.linkedin.com/feed/update/urn:li:activity:7394241662300073984/",
-    },
-    featured: true,
   },
   {
     id: "fastfacts",
