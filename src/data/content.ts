@@ -324,7 +324,7 @@ This site is a collection of my work, projects, and experiments as I continue gr
 The theme is also my creativity, so hope you enjoy exploring :)`,
 
   highlights: [
-    { label: "Hackathon Awards", value: "4" },
+    { label: "Hackathon Awards", value: "5" },
     { label: "Projects Built", value: "3" },
     { label: "Certifications", value: "2" },
   ],
