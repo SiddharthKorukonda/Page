@@ -71,9 +71,9 @@ export default function Projects() {
             <CardBody className="flex-1">
               {/* Title, date, and featured badge */}
               <div className="flex items-start justify-between gap-4 mb-2">
-                {project.links.github ? (
+                {(project.links.article || project.links.github || project.links.githubRepo) ? (
                   <a
-                    href={project.links.github}
+                    href={project.links.article || project.links.github || project.links.githubRepo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`
