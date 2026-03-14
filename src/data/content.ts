@@ -66,7 +66,7 @@ export const projects: Project[] = [
       github: "https://github.com/SiddharthKorukonda/CamGuard",
       article: "https://www.linkedin.com/feed/update/urn:li:activity:7432292605763354624/",
     },
-    featured: true,
+    featured: false,
   },
   {
     id: "surveilens",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     links: {
       github: "https://www.linkedin.com/feed/update/urn:li:activity:7381389500104511488/",
     },
-    featured: true,
+    featured: false,
   },
   {
     id: "sbu-care-connect",
