@@ -1,22 +1,34 @@
-// Recreated content configuration for portfolio site
-// NOTE: This file was reconstructed after accidental deletion.
-
 // ============================================
 // SITE CONFIGURATION
+// Edit these values to customize your portfolio
 // ============================================
 
 export const siteConfig = {
+  // Your name as displayed across the site
   name: "Siddharth Korukonda",
+  
+  // Your professional role/title
   role: "Computer Science (AI/DS) & Economics @ Stony Brook University",
+  
+  // One-line value statement shown on homepage
   tagline: "Building impactful solutions with code and creativity",
+  
+  // Your email address
   email: "siddharth.korukonda.sk@gmail.com",
-  resumeUrl: "/Resume - 2_23_26.pdf",
+  
+  // Link to your resume PDF (can be a Google Drive link, Dropbox, or hosted file)
+  resumeUrl: "https://example.com/resume.pdf",
+  
+  // Your LinkedIn profile URL
   linkedinUrl: "https://www.linkedin.com/in/siddharth-korukonda",
+  
+  // Your GitHub profile URL
   githubUrl: "https://github.com/SiddharthKorukonda",
 }
 
 // ============================================
 // PROJECTS
+// Add, edit, or remove projects below
 // ============================================
 
 export interface Project {
@@ -29,10 +41,10 @@ export interface Project {
   links: {
     demo?: string
     github?: string
-    githubRepo?: string
+    githubRepo?: string // GitHub link for icon only (title won't be clickable)
     article?: string
   }
-  image?: string
+  image?: string // Optional: path to project thumbnail
   featured?: boolean
 }
 
@@ -47,7 +59,7 @@ export const projects: Project[] = [
       "Automated personalized challenges by integrating Gemini and LangChain agents that analyze user-defined goals and dynamically generate quests, feedback, and progress tracking within the environment",
     ],
     techStack: ["React", "Next.js", "Three.js", "Gaussian Splatting", "Luma AI", "Gemini", "LangChain"],
-    tags: ["AI/ML", "3D Graphics", "Gamification"],
+    tags: ["AI/ML", "Gamification", "3D"],
     links: {
       github: "https://github.com/SiddharthKorukonda/RealityRPG",
       article: "https://www.linkedin.com/feed/update/urn:li:activity:7439122744694255616/",
@@ -125,7 +137,10 @@ export const projects: Project[] = [
   },
 ]
 
-// Minimal stubs for other content so the app compiles.
+// ============================================
+// EXPERIENCE
+// Add your work experience below
+// ============================================
 
 export interface Experience {
   id: string
@@ -133,43 +148,103 @@ export interface Experience {
   company: string
   location: string
   startDate: string
-  endDate: string
+  endDate: string // Use "Present" for current role
   bullets: string[]
   technologies?: string[]
 }
 
-export const experiences: Experience[] = []
+export const experiences: Experience[] = [
+  {
+    id: "exp-sbu-ta",
+    title: "Undergraduate Teaching Assistant",
+    company: "Stony Brook University",
+    location: "Stony Brook, NY",
+    startDate: "Jan 2026",
+    endDate: "Present",
+    bullets: [
+      "Created assignments and labs for CSE 220 (System Fundamentals I).",
+      "Delivered assistance to students in lectures of approximately 200 students.",
+      "Graded assignments and held weekly recitations and office hours.",
+    ],
+    technologies: ["C", "Assembly", "System Programming"],
+  },
+  {
+    id: "exp-sbu-hospital",
+    title: "Software Developer",
+    company: "Stony Brook University Hospital",
+    location: "Stony Brook, NY",
+    startDate: "Jan 2025",
+    endDate: "Present",
+    bullets: [
+      "Design and build the hospital website in React and Flask, create reusable UI components, develop secure APIs, manage SQL and NoSQL data, implement login and roles, and keep pages fast and accessible",
+      "Collaborate with BS/MD and pre-med students to analyze de-identified patient records, curate datasets, and train/evaluate clinical AI models, incorporating feedback to improve model quality",
+      "Write clear docs, help teammates and staff use the tools, watch error logs, and fix issues to keep everything stable",
+    ],
+    technologies: ["React", "Flask", "SQL", "NoSQL", "REST APIs", "Authentication"],
+  },
+  {
+    id: "exp-sbu-research",
+    title: "Undergraduate Researcher",
+    company: "Secure Distributed Computation and Learning Networks Research",
+    location: "Stony Brook, NY",
+    startDate: "Aug 2024",
+    endDate: "Present",
+    bullets: [
+      "Maintained 80% consensus in Byzantine networks by projecting updates onto convex sets and eliminating adversarial values",
+      "Achieved 77% valid input preservation in real-time decision-making under adversarial corruption",
+      "Enabled stable updates with 93% agent interaction through controlled neighborhood protocols",
+    ],
+    technologies: ["Distributed Systems", "Machine Learning", "Byzantine Fault Tolerance"],
+  },
+]
 
-export interface Award {
-  id: string
-  name: string
-  organization: string
-  description: string
-  date: string
-  sortOrder: number
-}
-
-export const awards: Award[] = []
-
-export const about = {
-  bio: "",
-  highlights: [],
-  coursework: [],
-  education: [],
-}
+// ============================================
+// SKILLS
+// List your technical skills
+// ============================================
 
 export interface SkillCategory {
   category: string
   skills: string[]
 }
 
-export const skills: SkillCategory[] = []
+export const skills: SkillCategory[] = [
+  {
+    category: "Languages",
+    skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "Go"],
+  },
+  {
+    category: "Frontend",
+    skills: ["React", "Next.js", "Vue.js", "Tailwind CSS", "HTML/CSS"],
+  },
+  {
+    category: "Backend",
+    skills: ["Node.js", "Express", "Django", "FastAPI", "GraphQL"],
+  },
+  {
+    category: "Databases",
+    skills: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
+  },
+  {
+    category: "Cloud & DevOps",
+    skills: ["AWS", "GCP", "Docker", "Kubernetes", "CI/CD", "Terraform"],
+  },
+  {
+    category: "Tools",
+    skills: ["Git", "Linux", "Vim", "Figma", "Jira"],
+  },
+]
+
+// ============================================
+// RESEARCH
+// Add your research papers and publications
+// ============================================
 
 export interface Research {
   id: string
   title: string
   venue: string
-  date: string
+  date: string // e.g., "2025 – 2026"
   authors: string[]
   myRole: string
   summary: string
@@ -180,8 +255,156 @@ export interface Research {
   year: number
 }
 
-export const research: Research[] = []
+export const research: Research[] = [
+  {
+    id: "research-nflpa",
+    title: "NFLPA Analytics – Special Teams Workload and Injury Risk",
+    venue: "NFL Players Association",
+    date: "2025 – 2026",
+    authors: ["Siddharth Korukonda"],
+    myRole: "Researcher analyzing special teams workload and next-week injury risk using fixed-effects GLMs and validated inference.",
+    summary: "Analyzed special teams workload and next-week injury risk using 5,950 NFL team-weeks, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
+    bullets: [
+      "Analyzed special teams workload and next-week injury risk using **5,950** **NFL team-weeks**, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
+      "Shock workload weeks raised next-week injury probability by **2.52** **pp (offense)** and **1.39** **pp (defense)**, while workload volatility (25th–75th percentile) increased offensive injury risk by **2.46** **pp** with no meaningful defensive effect.",
+      "League-level scaling implies **+8.8** **offensive** and **+5.7** **defensive** injuries per season attributable to shock workloads; results documented in a research paper submitted to the NFL Players Association.",
+    ],
+    technologies: ["Python", "DuckDB", "Statsmodels", "Poisson and Negative Binomial GLMs", "Fixed Effects"],
+    link: "./Special Teams Workload Volatility and Next Week Injury Risk in the NFL.pdf",
+    linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7421059283984850944/",
+    year: 2026,
+  },
+]
 
+// ============================================
+// AWARDS
+// Add your awards and achievements
+// ============================================
+
+export interface Award {
+  id: string
+  name: string
+  organization: string
+  description: string
+  date: string // e.g., "November 2025"
+  sortOrder: number // for sorting (higher = more recent, e.g., 202511 for Nov 2025)
+}
+
+export const awards: Award[] = [
+  {
+    id: "award-hopperhacks-2026",
+    name: "HopperHacks 2026",
+    organization: "Stony Brook University",
+    description: "• Best Usage of ElevenLabs",
+    date: "February 2026",
+    sortOrder: 202602,
+  },
+  {
+    id: "award-sbuhacks-2025",
+    name: "SBUHacks 2025",
+    organization: "Stony Brook University",
+    description: "• Best Usage of NeuralSeek\n• Best Usage of Snowflake",
+    date: "November 2025",
+    sortOrder: 202511,
+  },
+  {
+    id: "award-divhacks-2025",
+    name: "Columbia DivHacks 2025",
+    organization: "Columbia University",
+    description: "• Best Hack - Entertainment\n• Best Usage of Opik",
+    date: "October 2025",
+    sortOrder: 202510,
+  },
+  {
+    id: "cert-jpmc-swe",
+    name: "Software Engineer Job Simulation",
+    organization: "JP Morgan Chase",
+    description: "Completed virtual job simulation program",
+    date: "September 2025",
+    sortOrder: 202509,
+  },
+  {
+    id: "cert-jpmc-quant",
+    name: "Quantitative Research Job Simulation",
+    organization: "JP Morgan Chase",
+    description: "Completed virtual job simulation program",
+    date: "June 2025",
+    sortOrder: 202506,
+  },
+  {
+    id: "award-aime-2022",
+    name: "American Invitational Mathematics Examination",
+    organization: "The Bronx High School of Science",
+    description: "• AIME - 5\n• AMC 12B - 106.5\n• Total - 156.5",
+    date: "February 2022",
+    sortOrder: 202202,
+  },
+]
+
+// ============================================
+// ABOUT
+// Your bio and personal information
+// ============================================
+
+export const about = {
+  bio: `I'm a Computer Science and Economics student at Stony Brook University with a strong focus on artificial intelligence, distributed systems, and applied machine learning. I enjoy building end-to-end systems that move from research ideas to real, deployed products, especially in safety-critical and data-intensive environments.
+
+My work spans full-stack development and AI research, including building production web platforms for Stony Brook University Hospital, contributing to secure distributed learning research under adversarial conditions, and developing real-time multimodal AI systems that combine computer vision, NLP, and agentic reasoning. I've led and contributed to award-winning projects at national hackathons, where my teams were recognized for effective AI orchestration, evaluation, and scalable system design.
+
+Technically, I work across Python, Java, C and JavaScript, with experience in frameworks such as React, Flask, Spring Boot, PyTorch, and cloud-native tools like Docker, Kubernetes, and Snowflake. I care deeply about building systems that are not only intelligent, but reliable, interpretable, and usable by real people.
+
+I'm currently seeking opportunities in software engineering, AI and ML, and applied data science where I can work on challenging problems, learn from strong engineers and researchers, and build technology with real-world impact.
+
+This site is a collection of my work, projects, and experiments as I continue growing as an engineer and researcher.
+
+The theme is also my creativity, so hope you enjoy exploring :)`,
+
+  highlights: [
+    { label: "Hackathon Awards", value: "5" },
+    { label: "Projects Built", value: "5" },
+    { label: "Certifications", value: "2" },
+  ],
+
+  coursework: [
+    "Theory of Computation",
+    "Analysis of Algorithms",
+    "Data Structures",
+    "Object-Oriented Programming",
+    "Systems Fundamentals",
+    "Programming Abstractions",
+    "Linear Algebra",
+    "Calculus I–IV",
+    "Data Mining",
+    "Probability Theory",
+    "Game Theory",
+    "Graph Theory",
+    "Software Development",
+    "Machine Learning",
+    "Artificial Intelligence",
+    "Logic",
+    "Scripting",
+  ],
+
+  education: [
+    {
+      degree: "B.S. in Computer Science (spec. AI/DS)",
+      school: "Stony Brook University",
+      year: "Expected May 2027",
+    },
+    {
+      degree: "B.A. in Economics",
+      school: "Stony Brook University",
+      year: "Expected May 2027",
+    },
+  ],
+}
+
+// ============================================
+// HELPER FUNCTIONS
+// Utility functions for working with content
+// ============================================
+
+// Get all unique tags from projects
 export function getAllProjectTags(): string[] {
   const tags = new Set<string>()
   projects.forEach(project => {
@@ -190,11 +413,12 @@ export function getAllProjectTags(): string[] {
   return Array.from(tags).sort()
 }
 
+// Get featured projects
 export function getFeaturedProjects(): Project[] {
   return projects.filter(p => p.featured)
 }
 
+// Get awards sorted by date (newest first)
 export function getSortedAwards(): Award[] {
   return [...awards].sort((a, b) => b.sortOrder - a.sortOrder)
 }
-
