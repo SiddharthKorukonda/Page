@@ -5,7 +5,7 @@ import { ResumeIcon, ExternalLinkIcon } from '../components/icons'
 
 // Path to your resume PDF in the public folder
 // Make sure the filename matches exactly what's in your public folder
-const RESUME_PATH = './Resume - 2_23_26.pdf'
+const RESUME_PATH = './Resume - 4_7_26.pdf'
 
 export default function Resume() {
   const { isRetro, isDark } = useTheme()
