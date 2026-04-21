@@ -54,13 +54,13 @@ export default function TopNav() {
               text-xs sm:text-sm
               ${isRetro ? 'text-white/80' : isDark ? 'text-gray-400' : 'text-gray-500'}
             `}>
-              {siteConfig.headline}
+              {siteConfig.role}
             </span>
             <span className={`
               text-xs sm:text-sm
               ${isRetro ? 'text-white/80' : isDark ? 'text-gray-400' : 'text-gray-500'}
             `}>
-              {siteConfig.role}
+              {siteConfig.headline}
             </span>
           </Link>
         </div>

@@ -75,7 +75,7 @@ export default function Home() {
               {siteConfig.name}
             </h1>
 
-            {/* Headline (e.g. upcoming role) — same visual style as role below */}
+            {/* Role */}
             <p className={`
               text-xl sm:text-2xl font-medium mb-2
               ${isRetro 
@@ -85,10 +85,10 @@ export default function Home() {
                   : 'text-classic-accent'
               }
             `}>
-              {siteConfig.headline}
+              {siteConfig.role}
             </p>
 
-            {/* Role */}
+            {/* Headline (e.g. upcoming role) — same visual style as role above */}
             <p className={`
               text-xl sm:text-2xl font-medium mb-4
               ${isRetro 
@@ -98,7 +98,7 @@ export default function Home() {
                   : 'text-classic-accent'
               }
             `}>
-              {siteConfig.role}
+              {siteConfig.headline}
             </p>
 
             {/* Tagline */}
