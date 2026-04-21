@@ -51,8 +51,8 @@ export default function TopNav() {
               {siteConfig.name}
             </span>
             <span className={`
-              text-xs sm:text-sm font-medium
-              ${isRetro ? 'text-white/90' : isDark ? 'text-gray-300' : 'text-gray-600'}
+              text-xs sm:text-sm
+              ${isRetro ? 'text-white/80' : isDark ? 'text-gray-400' : 'text-gray-500'}
             `}>
               {siteConfig.headline}
             </span>
