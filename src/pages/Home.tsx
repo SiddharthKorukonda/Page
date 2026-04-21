@@ -75,6 +75,19 @@ export default function Home() {
               {siteConfig.name}
             </h1>
 
+            {/* Headline (e.g. upcoming role) */}
+            <p className={`
+              text-lg sm:text-xl font-semibold mb-2
+              ${isRetro 
+                ? 'text-mario-brown/90' 
+                : isDark
+                  ? 'text-gray-300'
+                  : 'text-gray-700'
+              }
+            `}>
+              {siteConfig.headline}
+            </p>
+
             {/* Role */}
             <p className={`
               text-xl sm:text-2xl font-medium mb-4

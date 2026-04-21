@@ -6,9 +6,12 @@
 export const siteConfig = {
   // Your name as displayed across the site
   name: "Siddharth Korukonda",
+
+  // Shown between name and role (home + nav)
+  headline: "Incoming SDE Co-op @ IBM",
   
   // Your professional role/title
-  role: "Computer Science (AI/DS) & Economics @ Stony Brook University",
+  role: "Computer Science (AI/DS) @ Stony Brook University",
   
   // One-line value statement shown on homepage
   tagline: "Building impactful solutions with code and creativity",

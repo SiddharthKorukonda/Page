@@ -43,12 +43,18 @@ export default function TopNav() {
               <HomeIcon size={20} />
             </Link>
           )}
-          <Link to="/" className="flex flex-col">
+          <Link to="/" className="flex flex-col gap-0.5">
             <span className={`
               font-display text-lg sm:text-xl font-bold
               ${isRetro ? 'text-white text-shadow-retro' : isDark ? 'text-white' : 'text-gray-900'}
             `}>
               {siteConfig.name}
+            </span>
+            <span className={`
+              text-xs sm:text-sm font-medium
+              ${isRetro ? 'text-white/90' : isDark ? 'text-gray-300' : 'text-gray-600'}
+            `}>
+              {siteConfig.headline}
             </span>
             <span className={`
               text-xs sm:text-sm
