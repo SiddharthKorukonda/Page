@@ -280,6 +280,7 @@ export const research: Research[] = [
       "Scikit-learn Tree Models and SHAP",
     ],
     link: "./Pre_Release_Uncertainty_and_CPI_Forecast_Errors.pdf",
+    linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7452232915360321536/",
     year: 2026,
   },
   {
