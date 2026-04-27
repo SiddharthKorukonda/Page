@@ -260,24 +260,6 @@ export interface Research {
 
 export const research: Research[] = [
   {
-    id: "research-nflpa",
-    title: "NFLPA Analytics – Special Teams Workload and Injury Risk",
-    venue: "NFL Players Association",
-    date: "2025 – 2026",
-    authors: ["Siddharth Korukonda"],
-    myRole: "Researcher analyzing special teams workload and next-week injury risk using fixed-effects GLMs and validated inference.",
-    summary: "Analyzed special teams workload and next-week injury risk using 5,950 NFL team-weeks, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
-    bullets: [
-      "Analyzed special teams workload and next-week injury risk using **5,950** **NFL team-weeks**, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
-      "Shock workload weeks raised next-week injury probability by **2.52** **pp (offense)** and **1.39** **pp (defense)**, while workload volatility (25th–75th percentile) increased offensive injury risk by **2.46** **pp** with no meaningful defensive effect.",
-      "League-level scaling implies **+8.8** **offensive** and **+5.7** **defensive** injuries per season attributable to shock workloads; results documented in a research paper submitted to the NFL Players Association.",
-    ],
-    technologies: ["Python", "DuckDB", "Statsmodels", "Poisson and Negative Binomial GLMs", "Fixed Effects"],
-    link: "./Special Teams Workload Volatility and Next Week Injury Risk in the NFL.pdf",
-    linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7421059283984850944/",
-    year: 2026,
-  },
-  {
     id: "research-kalshi-cpi",
     title: "Pre-Release Uncertainty and CPI Forecast Errors in Kalshi Prediction Markets",
     venue: "Independent Research",
@@ -297,6 +279,24 @@ export const research: Research[] = [
       "Quantile Regression and Newey-West HAC",
       "Scikit-learn Tree Models and SHAP",
     ],
+    year: 2026,
+  },
+  {
+    id: "research-nflpa",
+    title: "NFLPA Analytics – Special Teams Workload and Injury Risk",
+    venue: "NFL Players Association",
+    date: "2025 – 2026",
+    authors: ["Siddharth Korukonda"],
+    myRole: "Researcher analyzing special teams workload and next-week injury risk using fixed-effects GLMs and validated inference.",
+    summary: "Analyzed special teams workload and next-week injury risk using 5,950 NFL team-weeks, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
+    bullets: [
+      "Analyzed special teams workload and next-week injury risk using **5,950** **NFL team-weeks**, estimating fixed-effects Poisson and Negative Binomial models with clustered and bootstrap-validated inference.",
+      "Shock workload weeks raised next-week injury probability by **2.52** **pp (offense)** and **1.39** **pp (defense)**, while workload volatility (25th–75th percentile) increased offensive injury risk by **2.46** **pp** with no meaningful defensive effect.",
+      "League-level scaling implies **+8.8** **offensive** and **+5.7** **defensive** injuries per season attributable to shock workloads; results documented in a research paper submitted to the NFL Players Association.",
+    ],
+    technologies: ["Python", "DuckDB", "Statsmodels", "Poisson and Negative Binomial GLMs", "Fixed Effects"],
+    link: "./Special Teams Workload Volatility and Next Week Injury Risk in the NFL.pdf",
+    linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7421059283984850944/",
     year: 2026,
   },
 ]
