@@ -11,7 +11,7 @@ export const siteConfig = {
   headline: "Incoming SDE Co-op @ IBM",
   
   // Your professional role/title
-  role: "Computer Science (AI/DS) @ Stony Brook University",
+  role: "Computer Science (spec. AI/DS) @ Stony Brook University",
   
   // One-line value statement shown on homepage
   tagline: "Building impactful solutions with code and creativity",
