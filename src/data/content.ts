@@ -264,7 +264,7 @@ export const research: Research[] = [
     title: "Pre-Release Uncertainty and CPI Forecast Errors in Kalshi Prediction Markets",
     venue: "Independent Research",
     date: "2026",
-    authors: ["Siddharth Korukonda"],
+    authors: ["Siddharth Korukonda", "Jiabin Chen", "Andrew Luong"],
     myRole: "Researcher modeling how pre-release prediction-market uncertainty relates to CPI forecast errors using econometrics and machine learning.",
     summary: "Built a 77-month CPI forecasting panel integrating BLS CPI, Kalshi KXCPI contracts, market volatility, commodities, and expectations data, then evaluated uncertainty effects on forecast misses with econometric and tree-based models.",
     bullets: [
