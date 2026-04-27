@@ -374,7 +374,7 @@ export const awards: Award[] = [
 // ============================================
 
 export const about = {
-  bio: `I'm a Computer Science and Economics student at Stony Brook University with a strong focus on artificial intelligence, distributed systems, and applied machine learning. I enjoy building end-to-end systems that move from research ideas to real, deployed products, especially in safety-critical and data-intensive environments.
+  bio: `I'm a Computer Science student at Stony Brook University with a strong focus on artificial intelligence, distributed systems, and applied machine learning. I enjoy building end-to-end systems that move from research ideas to real, deployed products, especially in safety-critical and data-intensive environments.
 
 My work spans full-stack development and AI research, including building production web platforms for Stony Brook University Hospital, contributing to secure distributed learning research under adversarial conditions, and developing real-time multimodal AI systems that combine computer vision, NLP, and agentic reasoning. I've led and contributed to award-winning projects at national hackathons, where my teams were recognized for effective AI orchestration, evaluation, and scalable system design.
 
