@@ -277,6 +277,28 @@ export const research: Research[] = [
     linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7421059283984850944/",
     year: 2026,
   },
+  {
+    id: "research-kalshi-cpi",
+    title: "Pre-Release Uncertainty and CPI Forecast Errors in Kalshi Prediction Markets",
+    venue: "Independent Research",
+    date: "2026",
+    authors: ["Siddharth Korukonda"],
+    myRole: "Researcher modeling how pre-release prediction-market uncertainty relates to CPI forecast errors using econometrics and machine learning.",
+    summary: "Built a 77-month CPI forecasting panel integrating BLS CPI, Kalshi KXCPI contracts, market volatility, commodities, and expectations data, then evaluated uncertainty effects on forecast misses with econometric and tree-based models.",
+    bullets: [
+      "Built a **77-month** CPI forecasting panel from BLS CPI data, Kalshi KXCPI contracts, VIX, oil prices, and inflation expectations, converting **155** prediction-market range contracts into implied forecasts, uncertainty measures, entropy, and tail-risk signals.",
+      "Modeled the relationship between pre-release uncertainty and CPI forecast errors using OLS with Newey-West errors, quantile regression, Random Forest, Gradient Boosted Trees, SHAP analysis, and expanding-window time-series cross-validation.",
+      "Found that higher uncertainty was associated with larger CPI forecast misses, with quantile effects rising from **1.06** at the median to **1.52** at the 90th percentile, while Kalshi's high-uncertainty win rate fell from **65.4%** to **50.0%**, challenging the original prediction-market dominance hypothesis.",
+    ],
+    technologies: [
+      "Python",
+      "Time-Series Cross-Validation",
+      "Statsmodels",
+      "Quantile Regression and Newey-West HAC",
+      "Scikit-learn Tree Models and SHAP",
+    ],
+    year: 2026,
+  },
 ]
 
 // ============================================
