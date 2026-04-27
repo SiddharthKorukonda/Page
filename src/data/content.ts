@@ -279,6 +279,7 @@ export const research: Research[] = [
       "Quantile Regression and Newey-West HAC",
       "Scikit-learn Tree Models and SHAP",
     ],
+    link: "./Pre_Release_Uncertainty_and_CPI_Forecast_Errors.pdf",
     year: 2026,
   },
   {
