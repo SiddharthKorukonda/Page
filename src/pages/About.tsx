@@ -150,7 +150,7 @@ export default function About() {
           {about.technicalSkills.map((group) => (
             <div key={group.category}>
               <h3 className={`
-                text-lg font-medium mb-3
+                text-lg font-bold mb-3
                 ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
               `}>
                 {group.category}
