@@ -418,11 +418,6 @@ The theme is also my creativity, so hope you enjoy exploring :)`,
       school: "Stony Brook University",
       year: "Expected May 2027",
     },
-    {
-      degree: "B.A. in Economics",
-      school: "Stony Brook University",
-      year: "Expected May 2027",
-    },
   ],
 }
 
