@@ -135,6 +135,37 @@ export default function About() {
         </div>
       </section>
 
+      {/* Technical skills (languages, frameworks, tools, libraries, concepts) */}
+      <section className="mb-12">
+        <h2 className={`
+          text-2xl font-display mb-6
+          ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
+        `}>
+          Technical Skills
+        </h2>
+
+        <div className="space-y-6">
+          {about.technicalSkills.map((group) => (
+            <Card key={group.category} hover={false}>
+              <CardBody>
+                <h3 className={`
+                  text-lg font-display mb-3
+                  ${isRetro ? 'text-pipe-dark' : isDark ? 'text-blue-400' : 'text-classic-accent'}
+                `}>
+                  {group.category}
+                </h3>
+                <p className={`
+                  text-sm leading-relaxed
+                  ${isRetro ? 'text-mario-brown/85' : isDark ? 'text-gray-300' : 'text-gray-700'}
+                `}>
+                  {group.items.join(', ')}
+                </p>
+              </CardBody>
+            </Card>
+          ))}
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section>
         <h2 className={`
