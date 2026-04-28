@@ -7,6 +7,16 @@ import { about, siteConfig } from '../data/content'
 export default function About() {
   const { isRetro, isDark } = useTheme()
 
+  const tagPillClassName = `
+    px-4 py-2 rounded-full text-sm font-medium
+    ${isRetro 
+      ? 'bg-mario-green/10 text-pipe-dark border-2 border-mario-green/20' 
+      : isDark
+        ? 'bg-blue-500/10 text-blue-400 border border-blue-500/30'
+        : 'bg-classic-accent/10 text-classic-accent'
+    }
+  `
+
   return (
     <PageShell
       title="About Me"
@@ -119,15 +129,7 @@ export default function About() {
           {about.coursework.map((course, index) => (
             <span
               key={index}
-              className={`
-                px-4 py-2 rounded-full text-sm font-medium
-                ${isRetro 
-                  ? 'bg-mario-green/10 text-pipe-dark border-2 border-mario-green/20' 
-                  : isDark
-                    ? 'bg-blue-500/10 text-blue-400 border border-blue-500/30'
-                    : 'bg-classic-accent/10 text-classic-accent'
-                }
-              `}
+              className={tagPillClassName}
             >
               {course}
             </span>
@@ -135,7 +137,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Technical skills (languages, frameworks, tools, libraries, concepts) */}
+      {/* Technical skills — same pill style as Related Coursework */}
       <section className="mb-12">
         <h2 className={`
           text-2xl font-display mb-6
@@ -144,24 +146,26 @@ export default function About() {
           Technical Skills
         </h2>
 
-        <div className="space-y-6">
+        <div className="space-y-8">
           {about.technicalSkills.map((group) => (
-            <Card key={group.category} hover={false}>
-              <CardBody>
-                <h3 className={`
-                  text-lg font-display mb-3
-                  ${isRetro ? 'text-pipe-dark' : isDark ? 'text-blue-400' : 'text-classic-accent'}
-                `}>
-                  {group.category}
-                </h3>
-                <p className={`
-                  text-sm leading-relaxed
-                  ${isRetro ? 'text-mario-brown/85' : isDark ? 'text-gray-300' : 'text-gray-700'}
-                `}>
-                  {group.items.join(', ')}
-                </p>
-              </CardBody>
-            </Card>
+            <div key={group.category}>
+              <h3 className={`
+                text-lg font-medium mb-3
+                ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
+              `}>
+                {group.category}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {group.items.map((item, index) => (
+                  <span
+                    key={`${group.category}-${item}-${index}`}
+                    className={tagPillClassName}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
