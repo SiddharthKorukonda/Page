@@ -1,7 +1,7 @@
 import PageShell from '../components/PageShell'
 import Card, { CardBody } from '../components/Card'
 import { useTheme } from '../context/ThemeContext'
-import { experiences, skills } from '../data/content'
+import { experiences } from '../data/content'
 
 export default function Experience() {
   const { isRetro, isDark } = useTheme()
@@ -70,60 +70,6 @@ export default function Experience() {
                     </li>
                   ))}
                 </ul>
-
-                {/* Technologies */}
-                {exp.technologies && (
-                  <div className={`flex flex-wrap gap-2 pt-4 border-t ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
-                    {exp.technologies.map(tech => (
-                      <span
-                        key={tech}
-                        className={`
-                          px-2 py-1 rounded text-xs font-medium
-                          ${isRetro 
-                            ? 'bg-mario-green/10 text-pipe-dark' 
-                            : isDark
-                              ? 'bg-gray-700 text-gray-300'
-                              : 'bg-gray-100 text-gray-700'
-                          }
-                        `}
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </CardBody>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section>
-        <h2 className={`
-          text-2xl font-display mb-6
-          ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
-        `}>
-          Skills & Technologies
-        </h2>
-        
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {skills.map(category => (
-            <Card key={category.category} hover={false}>
-              <CardBody>
-                <h3 className={`
-                  text-lg font-display mb-4
-                  ${isRetro ? 'text-pipe-dark' : isDark ? 'text-blue-400' : 'text-classic-accent'}
-                `}>
-                  {category.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map(skill => (
-                    <span key={skill} className="skill-badge">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
               </CardBody>
             </Card>
           ))}
