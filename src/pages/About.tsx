@@ -139,6 +139,7 @@ export default function About() {
 
       {/* Technical skills — same pill style as Related Coursework */}
       <section className="mb-12">
+        <div className="h-6" aria-hidden />
         <h2 className={`
           text-2xl font-display mb-6
           ${isRetro ? 'text-mario-brown' : isDark ? 'text-white' : 'text-gray-900'}
