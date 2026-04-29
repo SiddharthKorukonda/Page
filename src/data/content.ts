@@ -327,6 +327,14 @@ export const awards: Award[] = [
     sortOrder: 202602,
   },
   {
+    id: "award-sfm-healthcare-2026",
+    name: "SFM HealthCare Innovation 2026",
+    organization: "SFM",
+    description: "• 2nd Overall Place",
+    date: "March 2026",
+    sortOrder: 202603,
+  },
+  {
     id: "award-sbuhacks-2025",
     name: "SBUHacks 2025",
     organization: "Stony Brook University",
