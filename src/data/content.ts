@@ -329,7 +329,7 @@ export const awards: Award[] = [
   {
     id: "award-sfm-healthcare-2026",
     name: "SFM HealthCare Innovation 2026",
-    organization: "SFM",
+    organization: "Stony Brook University - Scholars for Medicine",
     description: "• 2nd Overall Place",
     date: "March 2026",
     sortOrder: 202603,
