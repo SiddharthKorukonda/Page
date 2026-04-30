@@ -294,8 +294,6 @@ This portfolio is built with accessibility in mind:
 
 ## 📄 License
 
-MIT License - feel free to use this for your own portfolio!
-
 ## 🙏 Acknowledgments
 
 - Inspired by the classic Super Mario Bros. aesthetic
