@@ -20,7 +20,7 @@ export const siteConfig = {
   email: "siddharth.korukonda.sk@gmail.com",
   
   // Link to your resume PDF (can be a Google Drive link, Dropbox, or hosted file)
-  resumeUrl: "/Resume - 4_7_26.pdf",
+  resumeUrl: "/Resume - 4_27_26.pdf",
   
   // Your LinkedIn profile URL
   linkedinUrl: "https://www.linkedin.com/in/siddharth-korukonda",
